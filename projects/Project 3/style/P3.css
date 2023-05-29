@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&family=Satisfy&family=Sigmar&display=swap");
+body {
+  height: 921px;
+  direction: rtl;
+  margin: 0;
+  font-family: "Heebo", sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+}
+body .bg {
+  background-image: url(../images/Path\ 15.png);
+  height: 50%;
+  width: 100%;
+  position: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body .bg .prime {
+  background-color: rgba(0, 0, 0, 0.678);
+  width: 569px;
+  height: 643px;
+  position: relative;
+  left: -300px;
+  top: 124px;
+  padding: 30px;
+}
+@media (max-width: 1010px) {
+  body .bg .prime {
+    width: 70%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 150px;
+  }
+  body .bg .prime h1 {
+    font-size: 28px;
+  }
+  body .bg .prime p {
+    font-family: "Heebo", sans-serif;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 667px) {
+  body .bg .prime {
+    margin-top: 0;
+    height: 450px;
+  }
+}
+body .bg .prime input {
+  height: 40px;
+  width: 90%;
+  font-size: 20px;
+}
+@media (max-width: 844px) {
+  body .bg .prime input {
+    width: 100%;
+    margin-right: -34px;
+    height: 30px;
+    text-align: center;
+  }
+}
+@media (max-width: 838px) {
+  body .bg .prime input {
+    margin-right: -35px;
+  }
+}
+@media (max-width: 667px) {
+  body .bg .prime input {
+    height: 24px;
+  }
+}
+@media (max-width: 628px) {
+  body .bg .prime input {
+    margin-right: -50px;
+  }
+}
+@media (max-width: 414px) {
+  body .bg .prime input {
+    margin-right: -30px;
+  }
+}
+body .bg .prime a {
+  width: 90px;
+  height: 32px;
+  text-decoration: none;
+  background-color: #D31C75;
+  color: white;
+  padding: 9px 40px;
+  font-size: 20px;
+  border-radius: 2px;
+  border: 2px solid #D31C75;
+  font-family: "Heebo", sans-serif;
+}
+@media (max-width: 844px) {
+  body .bg .prime a {
+    margin-right: -29px;
+  }
+}
+body .bg form {
+  text-align: right;
+  padding-right: 45px;
+}
+@media (max-width: 667px) {
+  body .bg form {
+    margin-top: -40px;
+  }
+}
+body .bg label {
+  display: block;
+  margin-bottom: 20px;
+  font-family: "Heebo", sans-serif;
+}
+@media (max-width: 667px) {
+  body .bg label {
+    padding-top: 5px;
+  }
+}
+body .bg label:nth-child(2) {
+  margin-bottom: 40px;
+}
+body .bg span {
+  display: block;
+  margin-top: 8px;
+}
+@media (max-width: 844px) {
+  body .bg span {
+    margin-right: -34px;
+  }
+}
+@media (max-width: 637px) {
+  body .bg span {
+    margin-right: -50px;
+  }
+}
+@media (max-width: 896) {
+  body .bg span {
+    margin-right: -50px;
+  }
+}
+@media (max-width: 414px) {
+  body .bg span {
+    margin-right: -30px;
+  }
+}/*# sourceMappingURL=P3.css.map */

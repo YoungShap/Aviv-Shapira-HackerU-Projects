@@ -1,0 +1,88 @@
+body {
+    direction: rtl;
+}
+
+.row {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.row>* {
+    padding: 0;
+}
+
+.img {
+    background-image: url(../images/Coffee.png);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+h2 {
+    color: #020253;
+    font: normal normal 900 43px/63px Heebo;
+}
+
+p {
+    font: normal normal normal 20px/29px Heebo;
+    letter-spacing: 0px;
+    color: #020253;
+    opacity: 1;
+}
+
+.col-md-5 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    max-width: 350px;
+    padding: 16px;
+
+}
+
+label {
+    display: block;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .row {
+        position: static;
+        flex-flow: wrap-reverse;
+    }
+
+    form {
+        margin-top: 60px;
+    }
+
+    .img {
+        height: 200px;
+    }
+}
+
+label {
+    text-align: right;
+    font: normal normal bold 18px/24px Heebo;
+    letter-spacing: 0px;
+    color: #2C2C2C;
+    opacity: 1;
+}
+
+.g1 {
+    border-radius: 0px;
+    background-color: #020253;
+    width: 166px;
+    height: 45px;
+}
+
+.form-control {
+    background: #E5EEFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border-bottom: 3px solid  #020253;
+    border-radius: 0px;
+}
