@@ -24,6 +24,7 @@ a.nav-link {
 
 li.nav-item {
   margin: 0 12px;
+  white-space: nowrap;
 }
 
 nav {
