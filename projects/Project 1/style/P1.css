@@ -50,7 +50,7 @@ label {
     margin: 20px 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .row {
         position: static;
         flex-flow: wrap-reverse;
