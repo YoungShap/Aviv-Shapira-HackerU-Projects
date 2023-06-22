@@ -121,6 +121,9 @@ nav img {
     box-shadow: 0px 3px 6px #00000029;
     direction: ltr;
     padding: 8px;
+    margin: auto;
+
+
 
     img {
         height: 80px;
@@ -131,6 +134,20 @@ nav img {
         }
 
     }
+    .new {
+        height: 36px;
+        margin: 8px;
+        margin-left: 20px;
+      
+        
+    }
+    #ts {
+        height: 43px;
+    }
+    .oop {
+        margin-right: 10px;
+    }
+    
 }
 
 #about {
@@ -171,7 +188,7 @@ nav img {
 #gallery {
     padding: 100px 0;
     background-color: #f3f3f3;
-    margin-top: 30px;
+   
 
     h2 {
         text-align: center;
@@ -300,5 +317,6 @@ footer {
         box-shadow: 0px 0px 48px 0px rgba(0,0,0,0.5);
     }
 }
+
 
 
