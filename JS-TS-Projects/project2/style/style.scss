@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    height: 921px;
+    background-image: linear-gradient(60deg, #071192 0%, #F81E70 100%);
+    direction: rtl;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+
+    .prime {
+        padding: 80px;
+        height: 80%;
+        width: 45%;
+        background-color: rgb(243, 243, 237);
+        margin-right: 100px;
+        box-sizing: border-box;
+
+        h1 {
+        margin-top: 0;
+        font: normal normal 900 36px/53px Heebo;
+
+        }
+
+        p {
+            font: normal normal normal 20px/29px Heebo;
+        }
+
+        button {
+            font: normal normal 900 22px/30px Heebo;
+        }
+
+        label {
+            text-align: right;
+            font: normal normal bold 16px/24px Heebo;
+            letter-spacing: 0px;
+            color: #2C2C2C;
+            opacity: 1;
+        }
+
+        input {
+            font: normal normal 900 20px/53px Heebo;
+        }
+        span {
+            display: block;
+        }
+    }
+}

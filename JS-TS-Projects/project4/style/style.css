@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Indie+Flower&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    direction: rtl;
+    background-image:url(../images/background.png);
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    margin: 0;
+    background-repeat: no-repeat;
+  
+}
+
+
+h1 {
+    text-align: center;
+    color: #FDBD03;
+    margin: 16px;
+    font: normal normal 900 45px/66px Heebo;
+    
+}
+
+.frame {
+    width: 100%;
+    background-color: #1A1A1AD4;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-align: center;
+    padding: 23px;
+    box-sizing: border-box;
+   
+    
+}
+
+.board {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    
+    
+}
+
+.board div {
+    width: 158px;
+    height: 158px;
+    border: 1px solid;
+    font-size: 120px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #FDBD03;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FDBD03;
+    font-family: 'Indie Flower', cursive;
+}
+
+.board div:not(.dirty):hover {
+    cursor: pointer;
+    background-color: rgba(20, 203, 235, 0.075);
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 0;
+    margin: 0px;
+}
+
+button {
+    color: rgb(255, 255, 255);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #0b64b8fa;
+    font: normal normal normal 18px/29px Heebo;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color:  #110f83;
+}
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1.4);
+    }
+}
+
+.winner {
+    font-size: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: zoom-in 2s;
+    color: #aab3db;
+    text-shadow: rgb(0, 0, 0) 10px 0 10px;
+}
+
+.bg {
+    background-color: #0a3a7e !important;
+}
+p {
+    font: normal normal normal 20px/29px Heebo;
+    color: white;
+}
+.margin {
+    margin: 0px 20px;
+}
+.score {
+    font-size: 30px;
+}
+.btn2 {
+    margin-bottom: 10px;
+    
+}
