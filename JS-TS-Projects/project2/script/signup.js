@@ -43,8 +43,10 @@ function signUp() {
         document.querySelector('.congrats').style.display = 'block';
         loader(false);
     })
-    .catch(snackbar("שם משתמש כבר תפוס"))
-    loader(false);
+    .catch(() => {
+        snackbar("שם משתמש כבר תפוס");
+        loader(false);
+        })
 }
 
 function goToLogin() {
