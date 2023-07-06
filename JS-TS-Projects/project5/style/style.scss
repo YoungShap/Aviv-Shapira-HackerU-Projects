@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@800&family=Heebo:wght@100;200;300;400;500;600;700&family=Kablammo&family=Lobster&family=Oswald:wght@200;300;400;500;600;700&family=Satisfy&family=Sigmar&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Rubik:wght@300;600;700;900&family=Satisfy&display=swap%');
+
+body {
+    direction: rtl;
+    background-image: linear-gradient(60deg, #010216 0%, #e71e38b4 100%);
+    background-repeat: no-repeat;
+    min-height: 1368px;
+    overflow: hidden;
+
+    @media screen and (height: 600px)  {
+        overflow: visible;
+    }
+
+    @media screen and (height: 800px)  {
+        overflow: visible;
+    }
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width : 999px) {
+        flex-direction: column;
+    }
+
+
+
+}
+
+h1 {
+    font-family: 'Neonderthaw', cursive;
+    font-size: 50px;
+    text-shadow: 3px 2px #ff0000;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 16px;
+
+}
+
+.frame {
+    background-image: url(../images/abstract-oil-paint-texture-canvas-background_219766-3972.avif);
+    max-width: 801px;
+    border-radius: 6px;
+    padding: 0 20px;
+
+
+}
+
+button {
+    background-color: #1068bbb9;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+
+    @media screen and (max-width : 993px) {
+        font-size: 15px;
+
+    }
+}
+
+button:hover {
+    background-image: linear-gradient(60deg, #010216 0%, #e71e38b4 100%);
+    scale: 1.1;
+    transition: 0.2s;
+}
+
+img {
+    width: 100% !important;
+}
+
+.frame div {
+    text-align: center;
+    margin-top: 18px;
+}
+
+#gallery {
+    position: relative;
+}
+
+#gallery button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 70px;
+    background-color: #00000091;
+    font-size: 22px;
+    display: none;
+    margin-bottom: 15px;
+}
+
+#gallery button:hover {
+    background-color: black;
+}
+
+#gallery:hover button {
+    display: block;
+}
+
+#right {
+    right: 0;
+    border-radius: 20px 0 0 20px;
+}
+
+#left {
+    left: 0;
+    border-radius: 0 20px 20px 0;
+}
+
+.nextImages {
+    background-color: #bb1065b9;
+    margin-top: 10px;
+}
+
+.prevImages {
+    background-color: #bb1065b9;
+}

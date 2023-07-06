@@ -16,6 +16,7 @@ class TaskManager {
                 description: 'פה יופיע תיאור המשימה',
                 isCompleted: false,
                 priority: PriorityTypes.low,
+                contentEditable: false,
             },
             {
                 id: 2,
@@ -24,6 +25,7 @@ class TaskManager {
                 description: 'פה יופיע תיאור המשימה',
                 isCompleted: false,
                 priority: PriorityTypes.high,
+                contentEditable: false,
             },
             {
                 id: 3,
@@ -32,6 +34,7 @@ class TaskManager {
                 description: 'פה יופיע תיאור המשימה',
                 isCompleted: false,
                 priority: PriorityTypes.medium,
+                contentEditable: false,
             },
         ];
         this.showTasks();
@@ -61,7 +64,13 @@ class TaskManager {
     addTask(title, priority, description) {
         // מערך של ה-ids
         const ids = this.tasks.map(x => x.id);
-        const max = Math.max(...ids);
+        let max;
+        if (ids.length == 0) {
+            max = 0;
+        }
+        else {
+            max = Math.max(...ids);
+        }
         const now = new Date();
         const y = now.getFullYear();
         const m = now.getMonth() + 1;
@@ -77,10 +86,16 @@ class TaskManager {
             description: `${description}`,
             isCompleted: false,
             priority: priority || PriorityTypes.low,
+            contentEditable: false,
         });
         this.showTasks();
     }
     editTask(taskId) {
+        const item = this.tasks.find(x => x.id == taskId);
+        if (item) {
+            item.contentEditable = true;
+        }
+        this.showTasks();
     }
     removeTask(taskId) {
         const i = this.tasks.findIndex(x => x.id == taskId);
@@ -126,7 +141,7 @@ class TaskManager {
             div.innerHTML = `
                 <h3>${t.title}</h3>
                 <p><b>זמן יצירה:</b> ${t.addedTime}</p>
-                <p><b>תיאור:</b> ${t.description || '*אין הערה*'}</p>
+                <p contenteditable="${t.contentEditable}"><b>תיאור:</b> ${t.description || 'אין הערה'}</p>
 
                 <footer>
                     <button class="remove">מחק</button>

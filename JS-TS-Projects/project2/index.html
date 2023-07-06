@@ -4,18 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/signup.js"></script>
     <link rel="stylesheet" href="style/style.css">
-    <title>Shopping list</title>
+    <title>Document</title>
 </head>
 <body>
-    <section class="prime">
-    <h1>רשימת קניות</h1>
-    <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם גדדיש. קוויז דומור ליאמום בלינך חקיגו רוגצה.</p>
-    <label><span>שם הפריט</span>
-        <input type="text">
-    </label>
-    <button>הוספה</button>
-    <ul></ul>
-</section>
+    <div class="frame">
+        <div class="signUp">
+            <label>
+                שם משתמש:
+                <input type="text" class ="userName">
+            </label>
+
+            <label>
+                סיסמא:
+                <input type="password" class ="password">
+            </label>
+            <label>
+                שם מלא:
+                <input type="text" class ="fullName">
+            </label>
+            <label>
+                אימייל:
+                <input type="email" class ="email">
+            </label>
+
+            <button onclick="signUp()" type="submit">צור משתמש</button>
+        </div>
+        <div class="loaderFrame">
+            <div class="loader"></div>
+        </div>
+    
+        <div id="snackbar"></div>
+        <div class="congrats">
+            <div class="frame">
+                <p>יצרת משתמש בהצלחה!</p>
+                <button onclick="goToLogin()">לעמוד ההתחברות</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

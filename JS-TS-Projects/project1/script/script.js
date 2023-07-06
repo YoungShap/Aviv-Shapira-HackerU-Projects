@@ -205,7 +205,14 @@ function setApple() {
 
 function startAuto() {
     clearInterval(interval);
-    interval = setInterval(() => move(direction), 100);
+    interval = setInterval(() => move(direction), 50);
+    if (easy) {
+        interval = setInterval(() => move(direction), 100);
+    } else if (medium) {
+        interval = setInterval(() => move(direction), 200);
+    } else {
+        interval = setInterval(() => move(direction), 300);
+    }
 }
 
 window.addEventListener('keydown', ev => {

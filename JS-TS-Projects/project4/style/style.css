@@ -8,13 +8,20 @@ html {
 
 body {
     direction: rtl;
-    background-image:url(../images/background.png);
+    background-image: url(../images/background.png);
     display: grid;
-    grid-template-columns: repeat(2 ,1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin: 0;
     background-repeat: no-repeat;
-  
+
 }
+
+@media screen and (max-width:550px) {
+    body {
+        display: block;
+    }
+}
+
 
 
 h1 {
@@ -22,27 +29,41 @@ h1 {
     color: #FDBD03;
     margin: 16px;
     font: normal normal 900 45px/66px Heebo;
-    
+
+}
+
+@media screen and (max-width:380px) {
+    h1 {
+        margin: 0;
+        font-size: 30px;
+    }
 }
 
 .frame {
     width: 100%;
     background-color: #1A1A1AD4;
-    padding: 8px 16px;
     border-radius: 6px;
     text-align: center;
-    padding: 23px;
+    padding: 39.5px;
     box-sizing: border-box;
-   
-    
+
+
 }
+
+@media screen and (max-width:550px) {
+    .frame {
+        padding: 6px;
+
+    }
+}
+
 
 .board {
     display: inline-grid;
     grid-template-columns: repeat(3, 1fr);
-    
-    
-    
+
+
+
 }
 
 .board div {
@@ -50,7 +71,7 @@ h1 {
     height: 158px;
     border: 1px solid;
     font-size: 120px;
-    padding: 10px;
+    padding: 16px;
     box-sizing: border-box;
     border: 2px solid #FDBD03;
     background-color: white;
@@ -66,12 +87,37 @@ h1 {
     background-color: rgba(20, 203, 235, 0.075);
 }
 
-h2 {
-    font-size: 18px;
-    font-weight: bold;
-    padding: 12px 0;
-    margin: 0px;
+@media screen and (max-width:550px) {
+    .board div {
+        height: 100px;
+        width: 100px;
+    }
 }
+
+@media screen and (max-width:336px) {
+    .board div {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media screen and (max-width:280px) {
+    .board div {
+        height: 65px;
+        width: 65px;
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .board div {
+        height: 86px;
+        width: 86px;
+        font-size: 80px;
+    }
+}
+
+
 
 button {
     color: rgb(255, 255, 255);
@@ -87,7 +133,7 @@ button {
 }
 
 button:hover {
-    background-color:  #110f83;
+    background-color: #110f83;
 }
 
 @keyframes zoom-in {
@@ -118,17 +164,20 @@ button:hover {
 .bg {
     background-color: #0a3a7e !important;
 }
+
 p {
     font: normal normal normal 20px/29px Heebo;
     color: white;
 }
+
 .margin {
-    margin: 0px 20px;
+    margin: 20px 15px;
 }
+
 .score {
     font-size: 30px;
 }
+
 .btn2 {
-    margin-bottom: 10px;
-    
+    margin-bottom: 6px;
 }
