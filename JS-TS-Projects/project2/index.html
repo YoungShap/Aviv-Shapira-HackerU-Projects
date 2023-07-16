@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script/signup.js"></script>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/userstyle.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="c1">
+       
+    </div>
     <div class="frame">
         <div class="signUp">
+            <h1>מערכת הרשמה</h1>
+            <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית סחטיר לור</p> <br>
             <label>
                 שם משתמש:
                 <input type="text" class ="userName">
@@ -29,7 +34,7 @@
                 <input type="email" class ="email">
             </label>
 
-            <button onclick="signUp()" type="submit">צור משתמש</button>
+            <button class="btn1" onclick="signUp()" type="submit">צור משתמש</button>
         </div>
         <div class="loaderFrame">
             <div class="loader"></div>
@@ -39,7 +44,7 @@
         <div class="congrats">
             <div class="frame">
                 <p>יצרת משתמש בהצלחה!</p>
-                <button onclick="goToLogin()">לעמוד ההתחברות</button>
+                <button class="btn2" onclick="goToLogin()">לעמוד ההתחברות</button>
             </div>
         </div>
     </div>

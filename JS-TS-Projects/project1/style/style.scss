@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@800&family=Heebo:wght@200;300;400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&family=Satisfy&family=Sigmar&family=Varela+Round&display=swap');
+@import url('https://fonts.cdnfonts.com/css/rittswood-impresive');
+
+html {
+    height: 100%;
+
+}
+
+body {
+    direction: rtl;
+    background-color: #383838;
+    background-image: url(../assets/images/OFC.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    @media (max-width: 640px) {
+        background-image: linear-gradient(60deg, #092c22 20%, #0000003d 100%);
+    }
+
+}
+
+
+
+
+* {
+    font-family: 'Satisfy', cursive;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(147, 105, 214);
+    margin: 16px;
+    font-size: 60px;
+
+}
+
+.arrowKeys {
+    
+
+    @media (width: 280px) and (height:653px) {
+    padding-right: 30px;
+    }
+
+    @media (width: 360px) and (height:740px) {
+        margin-right: 28px;
+    }
+
+    @media (max-width: 640px) {
+        margin: auto;
+    }
+}
+
+.arrowUp {
+    background-image: radial-gradient(rgb(14, 13, 13), rgb(91, 121, 11));
+    height: 50px;
+    width: 50px;
+    display: none;
+
+    @media (width: 820px) and (height:1180px) {
+        display: inline;
+    }
+
+    @media (width: 768px) and (height:1024px) {
+        display: inline;
+    }
+
+    @media (width: 912px) and (height:1368px) {
+        display: inline;
+    }
+
+    @media (width: 540px) and (height:720px) {
+        display: inline;
+    }
+
+    @media (width: 280px) and (height:653px) {
+        display: inline;
+        height: 40px;
+        width: 40px;
+    }
+
+    @media (width: 412px) and (height:914px) {
+        display: inline;
+    }
+
+    @media (width: 1280px) and (height:800px) {
+        display: inline;
+    }
+
+    @media (width: 375px) and (height:667px) {
+        display: inline;
+    }
+
+    @media (width: 414px) and (height:896px) {
+        display: inline;
+    }
+
+    @media (width: 390px) and (height:844px) {
+        display: inline;
+    }
+
+    @media (width: 393px) and (height:851px) {
+        display: inline;
+    }
+
+    @media (width: 360px) and (height:740px) {
+        display: inline;
+    }
+
+    @media (width: 412px) and (height:915px) {
+        display: inline;
+    }
+
+    @media (max-width: 640px) {
+        display: inline;
+    }
+
+
+
+
+
+}
+
+.arrowRight {
+    background-image: radial-gradient(rgb(14, 13, 13), rgb(91, 121, 11));
+    height: 50px;
+    width: 50px;
+    display: none;
+
+    @media (width: 820px) and (height:1180px) {
+        display: inline;
+    }
+
+    @media (width: 768px) and (height:1024px) {
+        display: inline;
+    }
+
+    @media (width: 912px) and (height:1368px) {
+        display: inline;
+    }
+
+    @media (width: 540px) and (height:720px) {
+        display: inline;
+    }
+
+    @media (width: 280px) and (height:653px) {
+        display: inline;
+        height: 40px;
+        width: 40px;
+
+    }
+
+    @media (width: 412px) and (height:914px) {
+        display: inline;
+    }
+
+    @media (width: 1280px) and (height:800px) {
+        display: inline;
+    }
+
+    @media (width: 375px) and (height:667px) {
+        display: inline;
+        
+    }
+
+    @media (width: 414px) and (height:896px) {
+        display: inline;
+    }
+
+    @media (width: 390px) and (height:844px) {
+        display: inline;
+    }
+
+    @media (width: 393px) and (height:851px) {
+        display: inline;
+    }
+
+    @media (width: 360px) and (height:740px) {
+        display: inline;
+    }
+
+    @media (width: 412px) and (height:915px) {
+        display: inline;
+    }
+
+    @media (max-width: 640px) {
+        display: inline;
+    }
+}
+
+.arrowLeft {
+    background-image: radial-gradient(rgb(14, 13, 13), rgb(91, 121, 11));
+    height: 50px;
+    width: 50px;
+    display: none;
+
+    @media (width: 820px) and (height:1180px) {
+        display: inline;
+    }
+
+    @media (width: 768px) and (height:1024px) {
+        display: inline;
+    }
+
+    @media (width: 912px) and (height:1368px) {
+        display: inline;
+    }
+
+    @media (width: 540px) and (height:720px) {
+        display: inline;
+    }
+
+    @media (width: 280px) and (height:653px) {
+        display: inline;
+        height: 40px;
+        width: 40px;
+    }
+
+    @media (width: 412px) and (height:914px) {
+        display: inline;
+    }
+
+    @media (width: 1280px) and (height:800px) {
+        display: inline;
+    }
+
+    @media (width: 375px) and (height:667px) {
+        display: inline;
+    }
+
+    @media (width: 414px) and (height:896px) {
+        display: inline;
+    }
+
+    @media (width: 390px) and (height:844px) {
+        display: inline;
+    }
+
+    @media (width: 393px) and (height:851px) {
+        display: inline;
+    }
+
+    @media (width: 360px) and (height:740px) {
+        display: inline;
+    }
+
+    @media (width: 412px) and (height:915px) {
+        display: inline;
+    }
+
+    @media (max-width: 640px) {
+        display: inline;
+    }
+}
+
+.arrowDown {
+    background-image: radial-gradient(rgb(14, 13, 13), rgb(91, 121, 11));
+    height: 50px;
+    width: 50px;
+    display: none;
+
+    @media (width: 820px) and (height:1180px) {
+        display: inline;
+    }
+
+    @media (width: 768px) and (height:1024px) {
+        display: inline;
+    }
+
+    @media (width: 912px) and (height:1368px) {
+        display: inline;
+    }
+
+    @media (width: 540px) and (height:720px) {
+        display: inline;
+    }
+
+    @media (width: 280px) and (height:653px) {
+        display: inline;
+        height: 40px;
+        width: 40px;
+    }
+
+    @media (width: 412px) and (height:914px) {
+        display: inline;
+    }
+
+    @media (width: 1280px) and (height:800px) {
+        display: inline;
+    }
+
+    @media (width: 375px) and (height:667px) {
+        display: inline;
+    }
+
+    @media (width: 414px) and (height:896px) {
+        display: inline;
+    }
+
+    @media (width: 390px) and (height:844px) {
+        display: inline;
+    }
+
+    @media (width: 393px) and (height:851px) {
+        display: inline;
+    }
+
+    @media (width: 360px) and (height:740px) {
+        display: inline;
+    }
+
+    @media (width: 412px) and (height:915px) {
+        display: inline;
+    }
+
+    @media (max-width: 640px) {
+        display: inline;
+    }
+}
+
+.frame {
+    width: 80%;
+    max-width: 550px;
+    min-height: 830px;
+    background-repeat: no-repeat;
+    margin: auto;
+    border-radius: 6px;
+    text-align: center;
+    border-radius: 80px 105px 105px 80px;
+    margin-top: 128px;
+
+    
+
+    @media (max-width: 640px) {
+        margin: auto;
+    }
+
+    @media (max-width:1511px) {
+        margin-top: 150px;
+    }
+
+    @media (width:375px) and (height:667px) {
+        padding-right: 10px;
+
+    }
+
+    @media (width:390px) and (height:844px) {
+        padding-left: 30px;
+
+    }
+
+    @media (width:393px) and (height:851px) {
+        padding-left: 30px;
+
+    }
+
+    @media (max-width:365px) {
+        margin-right: 1px;
+    }
+
+    @media (width:820px) and (height:1180px) {
+        padding-top: 56px;
+    }
+
+    @media (width:768px) and (height:1024px) {
+        padding-top: 46px;
+    }
+
+    @media (width:912px) and (height:1368px) {
+        padding-top: 80px;
+
+
+        @media (width:1024px) and (height:600px) {
+            padding-bottom: 20px;
+        }
+
+        
+}}
+
+
+
+
+button {
+    background-color: #8bc34a;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+}
+
+button:hover {
+    background-color: #a4d967;
+}
+
+.board {
+    display: inline-grid;
+    border-radius: 3px;
+    border: 5px solid;
+    overflow: hidden;
+    background-color: #464646;
+    margin-right: 1px;
+    border-radius: 10px 10px;
+
+}
+
+
+
+.board div {
+    width: 10px;
+    height: 10px;
+
+    @media screen and (max-width:400px) {
+        width: 2px;
+        height: 2px;
+    }
+
+    @media screen and (max-height:850px) {
+        width: 8.5px;
+        height: 8.5px;
+    }
+
+    @media screen and (max-width:1511px) {
+        width: 8px;
+        height: 8px;
+    }
+
+    @media (max-width:640px) {
+        width: 10.6px;
+        height: 10.6px;
+    }
+
+    @media (max-width:350px) {
+        width: 8px;
+        height: 8px;
+    }
+
+    @media (max-width:280px) {
+        width: 4px;
+        height: 6px;
+        margin-left: 1px;
+
+    }
+
+    @media (max-width:269px) {
+        width: 7px;
+        height: 7px;
+    }
+
+    @media (width:375px) and (height:667px) {
+        width: 6px;
+        height: 6px;
+
+    }
+
+    @media (width:360px) and (height:740px) {
+        width: 8px;
+        height: 8px;
+    }
+
+    @media (max-width:561px) {
+        width: 8px;
+        height: 8px;
+    }
+
+    @media (width:820px) and (height:1180px) {
+        width: 11.1px;
+        height: 11.5px;
+    }
+
+    @media (width:768px) and (height:1024px) {
+        width: 9.5px;
+        height: 9.2px;
+    }
+
+    @media (width:912px) and (height:1368px) {
+        width: 12.5px;
+        height: 13.2px;
+    }
+
+    @media (width:1024px) and (height:600px) {
+        width: 5.7px;
+        height: 5.5px;
+    }
+
+    @media (width:1280px) and (height:800px) {
+        width: 7.7px;
+        height: 7.6px;
+    }
+
+    @media (max-width:414px) {
+        width: 6px;
+        height: 6px;
+
+    }
+
+    @media (width:280px) and (height:653px) {
+        width: 5.2px;
+        height: 5.2px;
+
+    }
+
+}
+
+
+
+.active {
+    background-image: radial-gradient(#212121 20%, transparent 20%),
+        radial-gradient(#fafafa 20%, transparent 20%);
+    background-color: #44e535;
+    background-position: 0 0, 50px 50px;
+    background-size: 9px 9px;
+}
+
+.head.up {
+    border-radius: 12px 12px 0 0;
+}
+
+.head.right {
+    border-radius: 0 12px 12px 0;
+}
+
+.head.down {
+    border-radius: 0 0 12px 12px;
+}
+
+.head.left {
+    border-radius: 12px 0 0 12px;
+}
+
+.topLeftRadius {
+    border-radius: 12px 0 0 0;
+}
+
+.topRightRadius {
+    border-radius: 0 12px 0 0;
+}
+
+.bottomRightRadius {
+    border-radius: 0 0 12px 0;
+}
+
+.bottomLeftRadius {
+    border-radius: 0 0 0 12px;
+}
+
+.apple::after {
+    content: "🍎";
+    position: relative;
+    top: -7px;
+    right: -3px;
+    font-size: 11px;
+   
+    @media (max-width:561px) {
+        font-size: 8px;
+    }
+}
+
+p {
+    color: rgb(55, 201, 120);
+    font-size: 15px;
+    margin: 0;
+    font-family: 'RittswoodImpresive_6', sans-serif;
+    font-family: 'RittswoodImpresiveBl_6', sans-serif;
+
+    @media screen and (max-height:850px) {
+        font-size: 10px;
+    }
+}
+
+p .margin {
+    margin: 0 3px;
+
+}

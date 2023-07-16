@@ -5,29 +5,32 @@ function signUp() {
         userName: document.querySelector(".userName").value,
         password: document.querySelector("input[type=password]").value,
     };
-
+    
     if (!obj.fullName) {
         snackbar("נא למלא שם מלא");
         return;
     }
-
+    
     if (!obj.email) {
         snackbar("נא למלא אימייל");
         return;
+    } else if (!(obj.email).includes("@") || !(obj.email).includes(".")) {
+        snackbar("נא למלא אימייל תקין");
+        return;
     }
-
+    
     if (!obj.userName) {
         snackbar("נא למלא שם משתמש");
         return;
     }
-
+    
     if (!obj.password) {
         snackbar("נא למלא סיסמא");
         return;
     }
-
+    
     loader(true);
-
+    
     fetch("https://api.shipap.co.il/signup", {
         method: 'POST',
         credentials: 'include',
@@ -38,15 +41,14 @@ function signUp() {
     })
     .then(res => res.json())
     .then(() => {
-        snackbar("משתמש נוצר בהצלחה");
         document.querySelector('.signUp').style.display = 'none';
         document.querySelector('.congrats').style.display = 'block';
         loader(false);
     })
     .catch(() => {
-        snackbar("שם משתמש כבר תפוס");
-        loader(false);
-        })
+    snackbar("שם משתמש כבר תפוס");
+    loader(false);
+    })
 }
 
 function goToLogin() {

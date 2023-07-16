@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 937px;
+  direction: rtl;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: row-reverse;
+  /* Safari */
+}
+@media screen and (max-width: 920px) {
+  body {
+    display: block;
+  }
+}
+body .frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 915px) {
+  body .frame {
+    width: 100%;
+  }
+}
+body .frame h1 {
+  font: normal normal 900 34px/53px Heebo;
+  color: #2E0450;
+}
+@media screen and (max-width: 1120px) {
+  body .frame h1 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 575px) {
+  body .frame h1 {
+    font-size: 25px;
+  }
+}
+body .frame p {
+  font: normal normal normal 20px/29px Heebo;
+  color: #2E0450;
+  margin-bottom: 18px;
+}
+@media screen and (max-width: 1120px) {
+  body .frame p {
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+}
+@media screen and (max-width: 575px) {
+  body .frame p {
+    font-size: 15px;
+    margin-bottom: 1px;
+  }
+}
+body .frame label {
+  font: normal normal normal 20px/29px Heebo;
+  color: #2E0450;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+@media screen and (max-width: 1120px) {
+  body .frame label {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 575px) {
+  body .frame label {
+    font-size: 15px;
+  }
+}
+body .frame input {
+  width: 80%;
+  height: 30px;
+  padding: 8px;
+  border: 1px solid rgba(128, 128, 128, 0.486);
+  border-radius: 5px;
+  font-size: 30px;
+  outline: none;
+}
+@media screen and (max-width: 1120px) {
+  body .frame input {
+    height: 24px;
+  }
+}
+@media screen and (max-width: 575px) {
+  body .frame input {
+    height: 20px;
+  }
+}
+@media screen and (width: 280px) {
+  body .frame input {
+    width: 200px;
+  }
+}
+body .frame .btn1 {
+  background: transparent linear-gradient(74deg, #53037B 0%, #230247 100%) 0% 0% no-repeat padding-box;
+  opacity: 1;
+  color: #FFFFFF;
+  width: 40%;
+  height: 38px;
+  text-align: right;
+  font: normal normal bold 12px/30px Heebo;
+  letter-spacing: 0.33px;
+  color: #FFFFFF;
+  opacity: 1;
+  text-align: center;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+}
+@media screen and (width: 280px) {
+  body .frame .btn1 {
+    width: 100px;
+  }
+}
+body .goSignUp {
+  font-size: 18px;
+}
+@media (max-width: 1360px) {
+  body .goSignUp {
+    font-size: 14px;
+  }
+}
+body .login {
+  margin-right: 20px;
+}
+body .login button {
+  background: transparent linear-gradient(74deg, #53037B 0%, #230247 100%) 0% 0% no-repeat padding-box;
+  opacity: 1;
+  color: #FFFFFF;
+  width: 25%;
+  height: 38px;
+  text-align: right;
+  font: normal normal bold 12px/30px Heebo;
+  letter-spacing: 0.33px;
+  color: #FFFFFF;
+  opacity: 1;
+  text-align: center;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+}
+@media screen and (width: 280px) {
+  body .login button {
+    width: 100px;
+  }
+}
+body .congrats {
+  display: none;
+}
+body .congrats .frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-left: 430px;
+}
+body .congrats .frame .btn2 {
+  background: transparent linear-gradient(74deg, #53037B 0%, #230247 100%) 0% 0%;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 25%;
+}
+@media screen and (max-width: 796px) {
+  body .congrats .frame .btn2 {
+    width: 45%;
+  }
+}
+body .congrats .frame p {
+  text-align: center;
+  margin: 10px 0 !important;
+  font-size: 30px;
+}
+@media screen and (max-width: 796px) {
+  body .congrats .frame p {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 796px) {
+  body .congrats {
+    width: 60%;
+  }
+}
+body .signUp {
+  margin-left: 20px;
+}
+body .c1 {
+  width: 66%;
+  background-image: url(../images/signup.png);
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 920px) {
+  body .c1 {
+    display: block;
+    height: 200px;
+    width: 100%;
+  }
+}
+body .c2 {
+  width: 66%;
+  background-image: url(../images/signIn.png.png);
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 920px) {
+  body .c2 {
+    display: block;
+    height: 200px;
+    width: 100%;
+  }
+}
+body #snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+body #snackbar.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+body .loaderFrame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6392156863);
+  display: none;
+}
+body .loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid gray;
+  width: 50px;
+  height: 50px;
+  /* Safari */
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=userstyle.css.map */

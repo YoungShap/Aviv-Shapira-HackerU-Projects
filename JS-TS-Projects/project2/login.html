@@ -1,71 +1,40 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Rest API</title>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <title>Loging</title>
+    <link rel="stylesheet" href="style/userstyle.css">
     <script src="script/script.js" defer></script>
 </head>
-
-<body onload="loginStatus()">
-    <h1>Rest API</h1>
-
+<body>
+    <div class="c2"></div>
     <div class="frame">
         <div class="login">
+            <h1> מערכת התחברות</h1>
+            <p>לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכ.</p>
             <label>
                 שם משתמש:
-                <input type="text" id="userName"required>
+                <input type="text" class="userName">
             </label>
 
             <label>
                 סיסמא:
-                <input type="password" id="password" required>
+                <input type="password" class="password">
             </label>
 
             <button onclick="login()">התחבר</button>
-        </div>
-        <p>אין לך עדיין משתמש? <a href="index.html">לחץ כאן להרשמה</a></p>
 
-        <div class="user">
-            <span class="userName"></span>
-            <button class="logout" onclick="logout()">התנתק</button>
-        </div>
-
-        <div class="products">
-            <table>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>שם המוצר</th>
-                        <th>מחיר</th>
-                        <th>הנחה</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td></td>
-                        <td><input id="name" type="text" placeholder="שם המוצר" ></td>
-                        <td><input id="price" type="number" placeholder="מחיר" ></td>
-                        <td><input id="discount" type="number" placeholder="הנחה" ></td>
-                        <td><button onclick="addProduct()">הוסף</button></td>
-                    </tr>
-                </tfoot>
-            </table>
+            <p class="goSignUp">אין לך עדיין משתמש? להרשמה<b><a href="index.html"> לחץ כאן</a></b></p>
         </div>
     </div>
-
+    
     <div class="loaderFrame">
         <div class="loader"></div>
     </div>
 
     <div id="snackbar"></div>
+    
 </body>
-
 </html>

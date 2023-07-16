@@ -1,10 +1,21 @@
 function login() {
     const obj = {
-        userName: document.querySelector("#userName").value,
-        password: document.querySelector("input[type=password]").value,
+        userName: document.querySelector(".userName").value,
+        password: document.querySelector(".password").value,
     };
+    
+    if (!obj.userName) {
+        snackbar("נא למלא שם משתמש");
+        return;
+    }
+    
+    if (!obj.password) {
+        snackbar("נא למלא סיסמא");
+        return;
+    }
+    
     loader(true);
-
+    
     // שליחה לשרת
     fetch("https://api.shipap.co.il/login", {
         method: 'POST',
@@ -14,28 +25,29 @@ function login() {
         },
         body: JSON.stringify(obj), // תוכן הקריאה לשרת
     })
-        // קבלה מהשרת
-        // *המרת התוכן לפי הצורך*
-        .then(res => res.json())
-        // התוכן שהתקבל מהשרת (לאחר טיפול של הפונקציה הקודמת)
-        .then(data => {
-            if (data.status == 'success') {
-                setUser(data.user);
-                snackbar("המשתמש התחבר בהצלחה");
-            } else {
-                alert(data.message);
-                loader(false);
-
-            }
-        });
+    // קבלה מהשרת
+    // *המרת התוכן לפי הצורך*
+    .then(res => res.json())
+    // התוכן שהתקבל מהשרת (לאחר טיפול של הפונקציה הקודמת)
+    .then(data => {
+        
+        if (data.status == 'success') {
+            window.location.replace("products.html");
+            setUser(data.user);
+            snackbar("המשתמש התחבר בהצלחה");
+        } else {
+            snackbar(data.message);
+            loader(false);
+        }
+    });
 }
-const pass = document.querySelector("#password");
-pass.addEventListener("keyup", ev => {
+
+const passwordInput = document.querySelector('.login .password');
+passwordInput.addEventListener('keyup', ev => {
     if (ev.key == 'Enter') {
         login();
     }
 })
-
 
 // פונקציה הרצה בהפעלת האתר ובודקת האם היוזר מחובר
 function loginStatus() {
@@ -44,17 +56,17 @@ function loginStatus() {
     fetch("https://api.shipap.co.il/login", {
         credentials: 'include',
     })
-        .then(res => res.json())
-        .then(data => {
-            if (data.status == 'success') {
-                setUser(data.user);
-                snackbar("המשתמש מחובר");
-            } else {
-                setUser();
-            }
+    .then(res => res.json())
+    .then(data => {
+        if (data.status == 'success') {
+            setUser(data.user);
+            snackbar("המשתמש מחובר");
+        } else {
+            setUser();
+        }
 
-            loader(false);
-        });
+        loader(false);
+    });
 }
 
 function logout() {
@@ -63,11 +75,12 @@ function logout() {
     fetch("https://api.shipap.co.il/logout", {
         credentials: 'include',
     })
-        .then(() => {
-            setUser();
-            snackbar("המשתמש התנתק בהצלחה");
-            loader(false);
-        });
+    .then(() => {
+        window.location.replace("login.html");
+        setUser();
+        snackbar("המשתמש התנתק בהצלחה");
+        loader(false);
+    })
 }
 
 function getProducts() {
@@ -76,31 +89,31 @@ function getProducts() {
     fetch("https://api.shipap.co.il/products", {
         credentials: 'include',
     })
-        .then(res => res.json())
-        .then(data => {
-            document.querySelector(".products").style.display = "block";
-            const tbody = document.querySelector(".products tbody");
-            tbody.innerHTML = '';
+    .then(res => res.json())
+    .then(data => {
+        document.querySelector(".products").style.display = "block";
+        const tbody = document.querySelector(".products tbody");
+        tbody.innerHTML = '';
 
-            data.forEach((p, i) => {
-                const tr = document.createElement("tr");
+        data.forEach((p, i) => {
+            const tr = document.createElement("tr");
 
-                tr.innerHTML = `
+            tr.innerHTML = `
             <td>${i + 1}</td>
             <td contenteditable="true" oninput="contentChange(this)" class="name">${p.name}</td>
             <td contenteditable="true" oninput="contentChange(this)" class="price">${p.price}</td>
             <td contenteditable="true" oninput="contentChange(this)" class="discount">${p.discount}</td>
             <td>
-            <button class="save" onclick="saveProduct(${p.id}, this)">💾</button>
+                <button class="save" onclick="saveProduct(${p.id}, this)">💾</button>
                 <button class="remove" onclick="removeProduct(${p.id}, this)">❌</button>
             </td>
         `;
 
-                tbody.appendChild(tr);
-            });
-
-            loader(false);
+            tbody.appendChild(tr);
         });
+
+        loader(false);
+    });
 }
 
 function contentChange(tdElem) {
@@ -126,11 +139,11 @@ function saveProduct(id, btnElem) {
         },
         body: JSON.stringify(obj),
     })
-        .then(() => {
-            tr.querySelector('.save').style.visibility = 'hidden';
-            loader(false);
-            snackbar("המוצר נשמר בהצלחה");
-        });
+    .then(() => {
+        tr.querySelector('.save').style.visibility = 'hidden';
+        loader(false);
+        snackbar("המוצר נשמר בהצלחה");
+    });
 }
 
 function addProduct() {
@@ -143,6 +156,16 @@ function addProduct() {
         price: +price.value,
         discount: +discount.value,
     };
+
+    if (!obj.name) {
+        snackbar("נא למלא שם מוצר");
+        return;
+    }
+    
+    if (!obj.price) {
+        snackbar("נא למלא מחיר");
+        return;
+    }
 
     name.value = '';
     price.value = '';
@@ -158,20 +181,19 @@ function addProduct() {
         },
         body: JSON.stringify(obj),
     })
-        .then(res => res.json())
-        .then(data => {
-            getProducts();
-            snackbar("המוצר נוסף בהצלחה");
-        });
-
+    .then(res => res.json())
+    .then(data => {
+        getProducts();
+        snackbar("המוצר נוסף בהצלחה");
+    });
 }
-const disc = document.querySelector("#discount");
-disc.addEventListener("keyup", ev => {
+
+const discountInput = document.querySelector('#discount');
+discountInput.addEventListener('keyup', ev => {
     if (ev.key == 'Enter') {
         addProduct();
     }
 })
-
 
 function removeProduct(id, btnElem) {
     if (!confirm('האם אתה בטוח כי ברצונך למחוק את הפריט המדובר?')) {
@@ -184,30 +206,27 @@ function removeProduct(id, btnElem) {
         method: 'DELETE',
         credentials: 'include',
     })
-        .then(() => {
-            btnElem.closest('tr').remove();
-            const trs = document.querySelectorAll('tbody tr');
-            trs.forEach((tr, i) => tr.querySelector('td').innerHTML = i + 1);
-            loader(false);
-            snackbar("המוצר נמחק בהצלחה");
-        });
+    .then(() => {
+        btnElem.closest('tr').remove();
+        const trs = document.querySelectorAll('tbody tr');
+        trs.forEach((tr, i) => tr.querySelector('td').innerHTML = i + 1);
+        loader(false);
+        snackbar("המוצר נמחק בהצלחה");
+    });
 }
 
 // פונקציה האחראית לשים את שם המשתמש בהודעה או לאפשר התחברות
 function setUser(user = null) {
-    const divLogin = document.querySelector(".login");
     const divUser = document.querySelector(".user");
     const divProduct = document.querySelector(".products");
 
     // אם יש יוזר, מציגה את שם היוזר ומסתירה את תיבת ההתחברות 
     if (user) {
-        divLogin.style.display = 'none';
         divUser.style.display = 'block';
         divUser.querySelector('.userName').innerHTML = `${user.fullName} מחובר!`;
         getProducts();
     } else {
         // אם אין יוזר, מציגה את תיבת ההתחברות
-        divLogin.style.display = 'block';
         divUser.style.display = 'none';
         divProduct.style.display = 'none';
         loader(false);

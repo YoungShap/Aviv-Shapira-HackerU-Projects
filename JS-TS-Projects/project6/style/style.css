@@ -7,7 +7,8 @@ html {
 body {
     direction: rtl;
     padding-bottom: 200px;
-    background: #333;
+    background-image: linear-gradient(rgb(48, 9, 71) , rgba(150, 10, 10, 0.815));
+   background-repeat: no-repeat;
 }
 
 * {
@@ -16,12 +17,14 @@ body {
 
 h1 {
     text-align: center;
-    color: white;
+    color:#9e9012;
     margin: 16px;
+    text-shadow: 20px;
 }
 
 .frame {
     text-align: center;
+    width: 100%;
 }
 
 h2 {
@@ -47,13 +50,13 @@ button:hover {
     display: inline-grid;
     overflow: hidden;
     background-color: #e4e4e4;
-    gap: 6px;
+    gap: 3px;
     padding: 6px;
     border-radius: 12px;
     direction: ltr;
 }
 
-.board div {
+.board img {
     width: 90px;
     height: 90px;
     background-color: #733bd5;
@@ -67,13 +70,39 @@ button:hover {
     transition: 0.3s;
 }
 
-.board div.option:not(.game-over div):hover {
+
+.board div {
+    width: 90px;
+    height: 90px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0);
+    border-radius: 12px;
+    transition: 0.5s;
+    background-size: cover;
+}
+@media screen and (max-width: 395px) {
+    .board div{
+        width: 70px;
+        height: 70px;
+    }
+  }
+  @media screen and (max-width: 319px) {
+    .board div{
+        width: 60px;
+        height: 60px;
+    }
+  }
+
+.board img.option:not(.game-over img):hover {
     scale: 1.05;
     cursor: pointer;
 }
 
 .active {
-    background-color: #5919c7 !important;
+    background-color: #00cc5c !important;
 }
 
 @keyframes zoom-in {
@@ -89,6 +118,7 @@ button:hover {
 .winner {
     font-size: 80px;
     position: fixed;
+    font-weight: bold;
     top: 0;
     right: 0;
     bottom: 0;
@@ -97,6 +127,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     animation: zoom-in 2s;
+    color:#9e9012;
 }
 
 .bg {
@@ -110,4 +141,57 @@ p {
 
 p .margin {
     margin: 0 12px;
+}
+
+.div1 {
+    background-image: url(../images/1.jpg);
+}
+
+.div2 {
+    background-image: url(../images/2.jpg);
+}
+
+.div3 {
+    background-image: url(../images/3.jpg);
+}
+
+.div4 {
+    background-image: url(../images/4.jpg);
+}
+
+.div5 {
+    background-image: url(../images/5.jpg);
+}
+
+.div6 {
+    background-image: url(../images/6.jpg);
+}
+
+.div7 {
+    background-image: url(../images/7.jpg);
+}
+
+.div8 {
+    background-image: url(../images/8.jpg);
+}
+.div9 {
+    background-image: url(../images/9.jpg);
+}
+.div10 {
+    background-image: url(../images/10.jpg);
+}
+.div11 {
+    background-image: url(../images/11.jpg);
+}
+.div12 {
+    background-image: url(../images/12.jpg);
+}
+.div13 {
+    background-image: url(../images/13.jpg);
+}
+.div14 {
+    background-image: url(../images/14.jpg);
+}
+.div15 {
+    background-image: url(../images/15.jpg);
 }

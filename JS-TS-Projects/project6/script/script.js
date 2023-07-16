@@ -21,7 +21,11 @@ function createBoard() {
         // רק אם זה לא המספר האחרון
         if (numbers[rand] !== length) {
             div.innerHTML = numbers[rand];
+            div.classList.add('div' + div.innerHTML);
+        } else {
+            div.classList.add('empty');
         }
+
 
         numbers.splice(rand, 1);
         board.appendChild(div);
@@ -58,8 +62,12 @@ function createBoard() {
             if (options.includes(i)) {
                 const empty = divs.find(el => el.innerHTML == '');
                 empty.classList.remove('active');
+                empty.classList.add('div' + elem.innerHTML)
                 empty.innerHTML = elem.innerHTML;
                 elem.innerHTML = "";
+                if (elem.classList.contains('div' + empty.innerHTML)) {
+                    elem.classList.remove('div' + empty.innerHTML);
+                }
                 document.querySelector(".counter").innerHTML = ++counter;
                 checkAllOptions();
             }
@@ -113,7 +121,11 @@ function checkAllOptions() {
 }
 
 function cheat() {
-    divs.forEach((elem, i) => elem.innerHTML = i + 1);
+    divs.forEach((elem, i) => {
+        elem.classList.remove('div' + elem.innerHTML);
+        elem.innerHTML = i + 1;
+        elem.classList.add('div' + (i + 1).toString());
+    });
     divs[divs.length - 1].innerHTML = '';
     checkAllOptions();
 }
