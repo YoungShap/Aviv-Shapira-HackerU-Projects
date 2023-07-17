@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
+    margin:0;
 }
 
 
@@ -27,6 +26,11 @@ body {
         @media screen and (max-width: 915px) {
             width: 100%;
         }
+
+        @media screen and (max-width:575px) {
+           padding-right: 10px;
+        }
+
 
 
 
@@ -85,7 +89,7 @@ body {
             border-radius: 5px;
             font-size: 30px;
             outline: none;
-            
+
 
             @media screen and (max-width:1120px) {
                 height: 24px;
@@ -93,12 +97,16 @@ body {
 
             @media screen and (max-width:575px) {
                 height: 20px;
+
             }
 
             @media screen and (width:280px) {
                 width: 200px;
             }
 
+            @media screen and (max-width:575px) {
+                font-size: 15px;
+            }
 
         }
 
@@ -123,223 +131,230 @@ body {
             }
         }
     }
-  
-.goSignUp {
-    font-size: 18px;
-    @media (max-width:1360px) {
-        font-size: 14px;
+
+    .goSignUp {
+        font-size: 18px;
+
+        @media (max-width:1360px) {
+            font-size: 14px;
+        }
+
     }
 
-}
+    .login {
+        margin-right: 20px;
 
-.login {
-    margin-right: 20px;
-    button {
-        background: transparent linear-gradient(74deg, #53037B 0%, #230247 100%) 0% 0% no-repeat padding-box;
-        opacity: 1;
-        color: #FFFFFF;
-        width: 25%;
-        height: 38px;
-        text-align: right;
-        font: normal normal bold 12px/30px Heebo;
-        letter-spacing: 0.33px;
-        color: #FFFFFF;
-        opacity: 1;
-        text-align: center;
-        margin-top: 15px;
-        border: none;
-        border-radius: 5px;
+        button {
+            background: transparent linear-gradient(74deg, #53037B 0%, #230247 100%) 0% 0% no-repeat padding-box;
+            opacity: 1;
+            color: #FFFFFF;
+            width: 25%;
+            height: 38px;
+            text-align: right;
+            font: normal normal bold 12px/30px Heebo;
+            letter-spacing: 0.33px;
+            color: #FFFFFF;
+            opacity: 1;
+            text-align: center;
+            margin-top: 15px;
+            border: none;
+            border-radius: 5px;
 
-        @media screen and (width:280px) {
-            width: 100px;
+            @media screen and (width:280px) {
+                width: 100px;
+            }
         }
     }
-}
 
-.congrats {
-    display: none;
+    .congrats {
+        display: none;
 
 
-    .frame {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin-left: 430px;
+        .frame {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-left: 430px;
+
+
+
+
+            .btn2 {
+                background: transparent linear-gradient(74deg, #53037B 0%, #230247 100%) 0% 0%;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+                border: none;
+                width: 25%;
+
+                @media screen and (max-width:796px) {
+                    width: 45%;
+                }
+            }
+
+            p {
+                text-align: center;
+                margin: 10px 0 !important;
+                font-size: 30px;
+
+                @media screen and (max-width:796px) {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        @media screen and (max-width:796px) {
+            width: 60%;
+
+        }
+    }
+
+    .signUp {
+        margin-left: 20px;
+    }
+
+    .c1 {
+        width: 66%;
+        background-image: url(../images/signup.png);
+        background-position: center;
+        background-size: cover;
+       
         
 
-
-
-        .btn2 {
-            background: transparent linear-gradient(74deg, #53037B 0%, #230247 100%) 0% 0%;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            width: 25%;
-
-            @media screen and (max-width:796px) {
-                width: 45%;
-            }
+        @media screen and (max-width:920px) {
+            display: block;
+            height: 200px;
+            width: 100%;
         }
 
-        p {
-            text-align: center;
-            margin: 10px 0 !important;
-            font-size: 30px;
+    }
 
-            @media screen and (max-width:796px) {
-                font-size: 25px;
-            }
+    .c2 {
+        width: 66%;
+        background-image: url(../images/signIn.png.png);
+        background-position: center;
+        background-size: cover;
+
+        @media screen and (max-width:920px) {
+            display: block;
+            height: 200px;
+            width: 100%;
         }
     }
 
-    @media screen and (max-width:796px) {
-        width: 60%;
-
-    }
-}
-.signUp {
-    margin-left: 20px;
-}
-
-.c1 {
-    width: 66%;
-    background-image: url(../images/signup.png);
-    background-position: center;
-    background-size: cover;
-
-    @media screen and (max-width:920px) {
-        display: block;
-        height: 200px;
-        width: 100%;
-    }
-
-}
-
-.c2 {
-    width: 66%;
-    background-image: url(../images/signIn.png.png);
-    background-position: center;
-    background-size: cover;
-    @media screen and (max-width:920px) {
-        display: block;
-        height: 200px;
-        width: 100%;
-    }
-}
-
-#snackbar {
-    visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-    font-size: 17px;
-}
-
-#snackbar.show {
-    visibility: visible;
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
-@-webkit-keyframes fadein {
-    from {
-        bottom: 0;
-        opacity: 0;
-    }
-
-    to {
+    #snackbar {
+        visibility: hidden;
+        min-width: 250px;
+        margin-left: -125px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
         bottom: 30px;
-        opacity: 1;
+        font-size: 17px;
     }
-}
 
-@keyframes fadein {
-    from {
+    #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+    @-webkit-keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+
+    .loaderFrame {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
         bottom: 0;
-        opacity: 0;
+        background-color: #000000a3;
+        display: none;
     }
 
-    to {
-        bottom: 30px;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeout {
-    from {
-        bottom: 30px;
-        opacity: 1;
-    }
-
-    to {
-        bottom: 0;
-        opacity: 0;
-    }
-}
-
-@keyframes fadeout {
-    from {
-        bottom: 30px;
-        opacity: 1;
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 8px solid gray;
+        width: 50px;
+        height: 50px;
+        -webkit-animation: spin 1s linear infinite;
+        /* Safari */
+        animation: spin 1s linear infinite;
     }
 
-    to {
-        bottom: 0;
-        opacity: 0;
-    }
-}
-
-.loaderFrame {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: #000000a3;
-    display: none;
-}
-
-.loader {
-    border: 8px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 8px solid gray;
-    width: 50px;
-    height: 50px;
-    -webkit-animation: spin 1s linear infinite;
     /* Safari */
-    animation: spin 1s linear infinite;
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 }
-
-/* Safari */
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}}

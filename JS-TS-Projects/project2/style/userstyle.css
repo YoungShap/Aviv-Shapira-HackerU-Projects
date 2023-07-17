@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
-  padding: 0;
 }
 
 body {
@@ -26,6 +25,11 @@ body .frame {
 @media screen and (max-width: 915px) {
   body .frame {
     width: 100%;
+  }
+}
+@media screen and (max-width: 575px) {
+  body .frame {
+    padding-right: 10px;
   }
 }
 body .frame h1 {
@@ -98,6 +102,11 @@ body .frame input {
 @media screen and (width: 280px) {
   body .frame input {
     width: 200px;
+  }
+}
+@media screen and (max-width: 575px) {
+  body .frame input {
+    font-size: 15px;
   }
 }
 body .frame .btn1 {
