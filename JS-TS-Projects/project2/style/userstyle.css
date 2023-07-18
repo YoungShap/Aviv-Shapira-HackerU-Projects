@@ -17,6 +17,11 @@ body {
     display: block;
   }
 }
+@media screen and (max-width: 570px) {
+  body {
+    min-height: 700px;
+  }
+}
 body .frame {
   display: flex;
   align-items: center;
@@ -197,7 +202,7 @@ body .congrats .frame p {
   }
 }
 body .signUp {
-  margin-left: 20px;
+  margin: 20px;
 }
 body .c1 {
   width: 66%;
