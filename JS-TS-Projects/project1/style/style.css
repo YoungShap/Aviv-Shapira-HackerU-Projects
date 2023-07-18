@@ -545,8 +545,8 @@ button:hover {
 }
 @media (max-width: 414px) {
   .board div {
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
   }
 }
 @media (width: 280px) and (height: 653px) {
@@ -557,10 +557,15 @@ button:hover {
 }
 
 .active {
-  background-image: radial-gradient(#212121 20%, transparent 20%), radial-gradient(#fafafa 20%, transparent 20%);
-  background-color: #44e535;
+  background-image: radial-gradient(#160212 20%, transparent 20%), radial-gradient(#249203 20%, transparent 20%);
+  background-color: #139433;
   background-position: 0 0, 50px 50px;
   background-size: 9px 9px;
+}
+@media (max-width: 561px) {
+  .active {
+    background-size: 7px 7px;
+  }
 }
 
 .head.up {
