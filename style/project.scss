@@ -71,7 +71,7 @@ span {
     margin: 0 !important;
     background-color: #000000;
     opacity: 1;
-    background-image: linear-gradient(45deg, rgba(19, 232, 241, 0.3019607843), rgba(19, 232, 241, 0.3019607843)), url(../images/WAVES.png);
+    background-image: linear-gradient(45deg, rgba(46, 209, 214, 0.548), rgba(55, 221, 213, 0.288)), url(../images/WAVES.png);
     background-size: cover;
 
     h1 {
@@ -333,16 +333,18 @@ footer {
 }
 .contactDone {
     direction: rtl;
-    text-align: center;
+    text-align: right;
     display: flex;
     flex-direction: column;
-    
+   
+   
     
     h3{
         font-size: 40px;
         margin-bottom: 10px;
         margin-left: 44px;
-        color: #08525c;
+        color: #033653;
+        
         @media screen and (max-width:620px) {
             font-size: 28px; 
         }
@@ -350,22 +352,21 @@ footer {
             font-size: 22px; 
         }
     }
+    
     p{
         display: inline;
         margin-left: 350px;
         margin-top: 5px;
         color: #0c3252;
+        text-align: right;
+        
         
     }
-    .email {
-        padding-right: 80px;
-        @media screen and (max-width:830px) {
-        padding: 0;
-        }
-    }
+    
     span {
+       
         @media screen and (max-width:420px){
-            font-size: 18px; 
+            font-size: 18px;
         }
     }
   
