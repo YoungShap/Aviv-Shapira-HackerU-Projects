@@ -34,7 +34,7 @@ for (let i = 1; i <= height; i++) {
 
 const board = document.querySelector(".board");
 board.style.gridTemplateColumns = `repeat(${width}, 1fr)`;
-
+//פונקציה שיוצרת את לוח המשחק//
 function createBoard() {
     for (let i = 0; i < height * width; i++) {
         const div = document.createElement('div');
@@ -96,7 +96,7 @@ function color() {
     divs[head].classList.add('head');
     divs[head].classList.add(direction);
 }
-
+//a function that moves the snake//
 function move(dir) {
     if (isGameOver) {
         return;

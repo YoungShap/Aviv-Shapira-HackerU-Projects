@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="style/project.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script/script.js" defer></script>
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-light navbar-light">
+    
+    <div class="container-fluid" style="flex-flow: row-reverse;">
+      <a class="navbar-brand logo" href="../AvivShapiraProject/index.html">
+        <span>Aviv Shapira</span>
+        <img src="images/project pfp.jpeg" class="icon">
+      </a>
+    </div>
+  </nav>
+  <div class="mt-4 p-5 main contact contactDone">
+    <h3>תודה על הפניה! פרטי השליחה:</h3>
+    <p><b>שם:</b> <span></span></p>
+    <p><b>אימייל:</b> <span></span></p>
+    <p><b>טלפון:</b> <span></span></p>
+    <p><b>תוכן:</b> <span></span></p>
+  </div>
+  
+  
+  <section id="links" class="row">
+    <div class="col-sm-2">
+      <a href="#"><img src="images/Icon material-location-on.svg" alt="location"></a>
+      <span>Golan Heights</span>
+    </div>
+    <div class="col-sm-2">
+      <a href="#"><img src="images/Icon simple-whatsapp.svg" alt="phone number"></a>
+      <span>0546676271</span>
+    </div>
+    <div class="col-sm-2">
+      <a href="https://www.linkedin.com/in/aviv-shapira-466561226/?originalSubdomain=il " target="_blank"><img
+          src="images/Icon awesome-linkedin-in.svg" alt="linkedin"></a>
+      <span>Aviv Shapira</span>
+    </div>
+    <div class="col-sm-2">
+      <a href="https://www.facebook.com/profile.php?id=100000319567794&mibextid=LQQJ4d" target="_blank"><img
+          src="images/Icon awesome-facebook-f.svg" alt="facebook"></a>
+      <span>Aviv Shapira</span>
+    </div>
+    <div class="col-sm-2">
+      <a href="#"><img src="images/Icon simple-email.svg" alt="email"></a>
+      <span>avivshapira22@gmail.com</span>
+    </div>
+    <div class="col-sm-2">
+      <a href="#"><img src="images/Icon simple-whatsapp-1.svg" alt="facebook"></a>
+      <span>0546676271</span>
+    </div>
+  </section>
+  <script>
+    if (localStorage.contact) {
+        const data = JSON.parse(localStorage.contact);
+
+        const contact = document.querySelectorAll('.contact span');
+
+        contact[0].innerHTML = data.name;
+        contact[1].innerHTML = data.email;
+        contact[2].innerHTML = data.phone;
+        contact[3].innerHTML = data.message;
+    }
+    </script>
+
+  <footer>
+    כל הזכויות שמורות לאביב שפירא 2023
+  </footer>
+</body>
+
+</html>

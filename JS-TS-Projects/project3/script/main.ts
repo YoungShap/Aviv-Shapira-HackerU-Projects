@@ -81,8 +81,8 @@ class TaskManager {
         // מערך של ה-ids
         const ids = this.tasks.map(x => x.id);
         let max;
-        if(ids.length == 0) {
-            max = 0 
+        if (ids.length == 0) {
+            max = 0
         } else {
             max = Math.max(...ids);
         }
@@ -102,31 +102,31 @@ class TaskManager {
             id: max + 1,
             title,
             addedTime,
-            description:`${description}`,
+            description: `${description}`,
             isCompleted: false,
             priority: priority || PriorityTypes.low,
-            contentEditable:false,
+            contentEditable: false,
         });
 
         this.showTasks();
     }
-
+    //פונקציה האפשרת עריכה//
     editTask(taskId: number) {
         const item = this.tasks.find(x => x.id == taskId);
         if (item) {
             item.contentEditable = true
         }
-        
+
         this.showTasks();
     }
-
+    //פונקציה המאפשרת מחיקה//
     removeTask(taskId: number) {
         const i = this.tasks.findIndex(x => x.id == taskId);
         this.tasks.splice(i, 1);
 
         this.showTasks();
     }
-
+    //פונקציה המאפשרת סימון בוצע//
     completeTask(taskId: number) {
         const item = this.tasks.find(x => x.id == taskId);
 
@@ -136,7 +136,7 @@ class TaskManager {
 
         this.showTasks();
     }
-
+   //ביטול סימון בוצע//
     unCompleteTask(taskId: number) {
         const item = this.tasks.find(x => x.id == taskId);
 
@@ -146,11 +146,11 @@ class TaskManager {
 
         this.showTasks();
     }
-
+   //פונקציה שיוצרת את המשימה לפי תנאים שהוגדרו על ידי המשתמש//
     showTasks() {
         const elem = document.querySelector("div.tasks");
-       
-        
+
+
         if (elem) {
             elem.innerHTML = "";
         }
@@ -163,9 +163,9 @@ class TaskManager {
             }
 
             switch (t.priority) {
-                case PriorityTypes.low : div.classList.add('low'); break;
-                case PriorityTypes.medium : div.classList.add('medium'); break;
-                case PriorityTypes.high : div.classList.add('high'); break;
+                case PriorityTypes.low: div.classList.add('low'); break;
+                case PriorityTypes.medium: div.classList.add('medium'); break;
+                case PriorityTypes.high: div.classList.add('high'); break;
             }
 
             div.innerHTML = `

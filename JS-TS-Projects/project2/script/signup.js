@@ -1,3 +1,5 @@
+
+//פונקציה המאפשרת למשתמש ליצור משתמש למערכת//
 function signUp() {
     const obj = {
         fullName: document.querySelector(".fullName").value,
@@ -33,11 +35,11 @@ function signUp() {
     
     fetch("https://api.shipap.co.il/signup", {
         method: 'POST',
-        credentials: 'include',
+        credentials: 'include', //מאפשר שליחה וקבלה של עוגיות//
         headers: {
-            'Content-Type': 'application/json' 
+            'Content-Type': 'application/json' //הגדרת סוג התוכן הנשלח לשרת//
         },
-        body: JSON.stringify(obj),
+        body: JSON.stringify(obj), //תוכן הקריאה לשרת//
     })
     .then(res => res.json())
     .then(() => {
@@ -50,7 +52,7 @@ function signUp() {
     loader(false);
     })
 }
-
+//פונקציה אשר לוקחת אותך לדף ההתחברות//
 function goToLogin() {
     window.location.replace("login.html");
 }

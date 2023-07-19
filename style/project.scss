@@ -86,7 +86,7 @@ span {
     }
 
     p {
-        font-size: 20px;
+        font-size: 22px;
         color: #272323;
         text-align: center;
         font: normal normal medium 20px/30px Heebo;
@@ -315,6 +315,25 @@ footer {
         }
 
         box-shadow: 0px 0px 48px 0px rgba(0,0,0,0.5);
+    }
+}
+.contactDone {
+    direction: rtl;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    h3{
+        font-size: 40px;
+        @media screen and (max-width:620px) {
+            font-size: 28px; 
+        }
+    }
+    p{
+        display: flex;
+        flex-direction: column;
+        margin-left: 450px;
+        margin-top: 5px;
+       
     }
 }
 

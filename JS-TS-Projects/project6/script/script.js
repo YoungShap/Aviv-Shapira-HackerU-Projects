@@ -84,7 +84,7 @@ function createBoard() {
         timer++;
     }, 1000);
 }
-
+//פונקציה שבודקת את כל האופציות עד לסיום המשחק//
 function checkAllOptions() {
     divs.forEach(el => el.classList.remove('empty', 'option'));
     const emptyIndex = divs.findIndex(div => div.innerHTML == '');
@@ -119,7 +119,7 @@ function checkAllOptions() {
         gameOver();
     }
 }
-
+//רמאות (למי שרוצה)//
 function cheat() {
     divs.forEach((elem, i) => {
         elem.classList.remove('div' + elem.innerHTML);
@@ -129,7 +129,7 @@ function cheat() {
     divs[divs.length - 1].innerHTML = '';
     checkAllOptions();
 }
-
+//פונקציית סיום משחק//
 function gameOver() {
     clearInterval(timerInterval);
     board.classList.add('game-over');

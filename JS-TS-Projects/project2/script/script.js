@@ -68,7 +68,7 @@ function loginStatus() {
         loader(false);
     });
 }
-
+//פונקציה שמנתקת את המשתמש//
 function logout() {
     loader(true);
 
@@ -82,7 +82,7 @@ function logout() {
         loader(false);
     })
 }
-
+//פונקציה שמביאה את המוצרים מהשרת//
 function getProducts() {
     loader(true);
 
@@ -115,11 +115,11 @@ function getProducts() {
         loader(false);
     });
 }
-
+//פונקציה שמאפשרת עריכה למוצר//
 function contentChange(tdElem) {
     tdElem.closest('tr').querySelector('.save').style.visibility = 'visible';
 }
-
+//פונקציה ששומרת את השינויים שנעשו//
 function saveProduct(id, btnElem) {
     const tr = btnElem.closest('tr');
 
@@ -194,7 +194,7 @@ discountInput.addEventListener('keyup', ev => {
         addProduct();
     }
 })
-
+//פונקציה שמוחקת מוצר מהרשימה אצל המשתמש//
 function removeProduct(id, btnElem) {
     if (!confirm('האם אתה בטוח כי ברצונך למחוק את הפריט המדובר?')) {
         return;
@@ -232,7 +232,7 @@ function setUser(user = null) {
         loader(false);
     }
 }
-
+//מסך טעינה //
 function loader(isShowing = false) {
     const loaderFrame = document.querySelector('.loaderFrame');
 
@@ -242,7 +242,7 @@ function loader(isShowing = false) {
         loaderFrame.style.display = 'none';
     }
 }
-
+//הודעה למשתמש//
 function snackbar(message) {
     const elem = document.getElementById("snackbar");
     elem.innerHTML = message;

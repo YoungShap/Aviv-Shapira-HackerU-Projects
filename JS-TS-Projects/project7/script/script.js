@@ -2,7 +2,7 @@ const amount = 12;
 const numbers = [];
 let attamps = 0;
 let timer = 0;
-
+//טיימר למשחק//
 let timerInterval = setInterval(() => {
     timer++;
 
@@ -80,7 +80,7 @@ function check() {
         }
     }
 }
-
+//פונקציה שבודקת אם המשחק הושלם בהצלחה//
 function checkIsComplete() {
     const cards = board.querySelectorAll("div:not(.hidden)");
 

@@ -4,7 +4,7 @@ let winner;
 let winnerArray;
 let scoreX = localStorage.getItem("scoreX") || 0;
 let scoreO = localStorage.getItem("scoreO") || 0;
-
+//פונקציה שיוצרת את הלוח//
 function create() {
     for (let i = 0; i < 9; i++) {
         const div = document.createElement('div');
@@ -29,7 +29,7 @@ function create() {
 }
 
 create();
-
+//פונקציה שבודקת את הלוח כדי לבדוק את התוצאה לפי מהלכי השחקנים//
 function check() {
     const divs = elem.querySelectorAll('div');
 
@@ -73,7 +73,7 @@ function check() {
         showWinner(`The winner is ${winner}`);
     }
 }
-
+//פונקציה המציגה את השחקן המנצח//
 function showWinner(text) {
     const winner = document.createElement("div");
     winner.classList.add("winner");
@@ -93,22 +93,15 @@ function showWinner(text) {
         frame.removeChild(winner);
     }, 2 * 1000);
 }
+//איפוס המשחק//
 function reset() {
     elem.innerHTML = "";
     create();
     winner = false;
 }
-
+//איפוס תוצאות//
 function resetScore() {
     localStorage.clear();
     location.reload();
 }
 
-// להציג כל פעם מחווה של מי התור הנוכחי
-// לאפשר לצבור נקודות
-// כפתור איפוס
-// המנצח הוא הראשון בפעם הבאה
-
-
-// אתגר!
-// לאפשר טיימר למשחק
