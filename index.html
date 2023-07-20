@@ -234,16 +234,16 @@
         
         <form onsubmit="send(event)">
           <label class="form-label">שם:</label>
-          <input class="form-control" type="name" name="name">
+          <input class="form-control" type="name" name="name" required>
 
         <label class="form-label">אימייל:</label>
-        <input class="form-control" type="email" name="email">
+        <input class="form-control" type="email" name="email" required>
 
         <label class="form-label">טלפון:</label>
-        <input class="form-control" type="phone" name="phone">
+        <input class="form-control" type="phone" name="phone" required>
 
         <label class="form-label">הודעה:</label>
-        <textarea class="form-control" cols="30" rows="10" name="message"></textarea>
+        <textarea class="form-control" cols="30" rows="10" name="message" required></textarea>
         <button class="btn btn-info">שליחה</button>
       </form>
     </div>
