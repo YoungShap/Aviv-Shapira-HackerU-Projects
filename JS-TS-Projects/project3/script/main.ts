@@ -15,6 +15,7 @@ enum PriorityTypes {
 }
 
 class TaskManager {
+    private isCurrentlyEditing: boolean = false;
     tasks: Task[] = [
         {
             id: 1,
@@ -113,10 +114,24 @@ class TaskManager {
     //פונקציה האפשרת עריכה//
     editTask(taskId: number) {
         const item = this.tasks.find(x => x.id == taskId);
-        if (item) {
+        const isDivFound = document.querySelector("div[contenteditable='true']")
+        if (item && isDivFound == null) {
             item.contentEditable = true
+            this.isCurrentlyEditing = true;
+        } else {
+            throw new Error(`Task ${taskId}`)
         }
-
+        this.showTasks();
+    }
+    saveTask(taskId: number) {
+        const item = this.tasks.find(x => x.id == taskId);
+        const div = document.querySelector("div[contenteditable='true']")
+        if (div == null || item == null) {
+            return;
+        }
+        item.contentEditable = false;
+        this.isCurrentlyEditing = false;
+        item.description = div.innerHTML
         this.showTasks();
     }
     //פונקציה המאפשרת מחיקה//
@@ -177,6 +192,7 @@ class TaskManager {
                     <button class="remove">מחק</button>
                     ${t.isCompleted ? '<button class="uncomplete">לא בוצע</button>' : '<button class="complete">בוצע</button>'}
                     <button class="edit">עריכה</button>
+                    <button class="finishEdit">שמור</button>
                 </footer>
             `;
 

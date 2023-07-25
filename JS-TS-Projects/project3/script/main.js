@@ -8,6 +8,7 @@ var PriorityTypes;
 class TaskManager {
     constructor() {
         var _a;
+        this.isCurrentlyEditing = false;
         this.tasks = [
             {
                 id: 1,
@@ -90,18 +91,37 @@ class TaskManager {
         });
         this.showTasks();
     }
+    //פונקציה האפשרת עריכה//
     editTask(taskId) {
         const item = this.tasks.find(x => x.id == taskId);
-        if (item) {
+        const isDivFound = document.querySelector("div[contenteditable='true']");
+        if (item && isDivFound == null) {
             item.contentEditable = true;
+            this.isCurrentlyEditing = true;
+        }
+        else {
+            throw new Error(`Task ${taskId}`);
         }
         this.showTasks();
     }
+    saveTask(taskId) {
+        const item = this.tasks.find(x => x.id == taskId);
+        const div = document.querySelector("div[contenteditable='true']");
+        if (div == null || item == null) {
+            return;
+        }
+        item.contentEditable = false;
+        this.isCurrentlyEditing = false;
+        item.description = div.innerHTML;
+        this.showTasks();
+    }
+    //פונקציה המאפשרת מחיקה//
     removeTask(taskId) {
         const i = this.tasks.findIndex(x => x.id == taskId);
         this.tasks.splice(i, 1);
         this.showTasks();
     }
+    //פונקציה המאפשרת סימון בוצע//
     completeTask(taskId) {
         const item = this.tasks.find(x => x.id == taskId);
         if (item) {
@@ -109,6 +129,7 @@ class TaskManager {
         }
         this.showTasks();
     }
+    //ביטול סימון בוצע//
     unCompleteTask(taskId) {
         const item = this.tasks.find(x => x.id == taskId);
         if (item) {
@@ -116,6 +137,7 @@ class TaskManager {
         }
         this.showTasks();
     }
+    //פונקציה שיוצרת את המשימה לפי תנאים שהוגדרו על ידי המשתמש//
     showTasks() {
         const elem = document.querySelector("div.tasks");
         if (elem) {
@@ -147,6 +169,7 @@ class TaskManager {
                     <button class="remove">מחק</button>
                     ${t.isCompleted ? '<button class="uncomplete">לא בוצע</button>' : '<button class="complete">בוצע</button>'}
                     <button class="edit">עריכה</button>
+                    <button class="finishEdit">שמור</button>
                 </footer>
             `;
             (_a = div.querySelector('.remove')) === null || _a === void 0 ? void 0 : _a.addEventListener("click", () => this.removeTask(t.id));
