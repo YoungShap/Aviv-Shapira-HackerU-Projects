@@ -4,7 +4,7 @@ To run and install ---
 npm install
 
 
-npm start
+npm run start
 
 About The Project
 -
