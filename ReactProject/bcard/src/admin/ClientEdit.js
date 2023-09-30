@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { BiRefresh } from 'react-icons/bi';
 import { GeneralContext } from '../App';
 import '../cards/Form.css'
+import '../cards/FormButtons.css'
 import { useNavigate, useParams } from 'react-router-dom';
 import { editSchema } from '../Config';
 
@@ -38,7 +39,6 @@ export default function ClientEdit() {
                 setFormData(data.filter(c => c.id == id)[0]);
             })
             .catch(err => {
-                snackbar(err.message);
                 navigate('/error');
             })
             .finally(() => setIsLoading(false));
@@ -59,7 +59,7 @@ export default function ClientEdit() {
                 [id]: value,
             };
         }
-        const schema = editSchema.validate(obj, { abortEarly: false, allowUnknown: true, });
+        const schema = editSchema.validate(obj, { abortEarly: false, allowUnknown: true });
         const err = { ...errors, [id]: undefined };
 
         if (schema.error) {

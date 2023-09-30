@@ -64,7 +64,7 @@ function App() {
 
   return (
     <>
-      <GeneralContext.Provider value={{ user, setUser, setIsLoading, snackbar, roleType, setRoleType, search, setSearch, searchWord, setSearchWord, isDark, setIsDark }}>
+      <GeneralContext.Provider value={{ user, setUser, setIsLoading, snackbar, roleType, setRoleType, search, setSearch, searchWord, setSearchWord, isDark, setIsDark, RoleTypes}}>
         <Navbar />
        <div className='app-frame'> {user ?
           <Router /> :

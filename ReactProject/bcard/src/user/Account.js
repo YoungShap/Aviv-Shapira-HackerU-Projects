@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { GeneralContext } from '../App';
 import { BiRefresh } from 'react-icons/bi';
 import '../cards/Form.css'
+import '../cards/FormButtons.css'
 import { useNavigate } from 'react-router-dom';
 import { editSchema } from '../Config';
 

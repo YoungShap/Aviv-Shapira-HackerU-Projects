@@ -101,7 +101,7 @@ export default function Cards() {
               <div className='myIcons'>
                 <div className='icons1'>
                   <span > {user && <BsFillHeartFill className='Heart' size={26} style={{ color: c.favorite ? 'red' : 'rgb(51, 49, 49)' }} onClick={() => c.favorite ? unfavorite(c) : favorite(c)} />}</span>
-                  <span className='Phone'><FaPhoneAlt size={26} /></span>
+                  <a href={`tel:${c.phone}`} className='Phone'><FaPhoneAlt size={26} /></a>
                   <Link to={`/cards/${c.id}`}><span className='Expand'><AiOutlineExpand size={26} /></span></Link>
                 </div>
                 <div className='sep'></div>

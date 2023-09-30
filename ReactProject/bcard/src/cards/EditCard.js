@@ -3,13 +3,15 @@ import { BiRefresh } from 'react-icons/bi';
 import { useNavigate, useParams } from 'react-router-dom';
 import { GeneralContext } from '../App';
 import { cardSchema } from '../Config';
+import './Form.css'
+import './FormButtons.css'
 
 export default function EditCard() {
   const { id } = useParams();
   const [isValid, setIsValid] = useState(false);
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
-  const { setIsLoading, snackbar, } = useContext(GeneralContext);
+  const { setIsLoading, snackbar, user, roleType, RoleTypes} = useContext(GeneralContext);
   const [formData, setFormData] = useState({
     title: '',
     subtitle: '',
@@ -28,20 +30,25 @@ export default function EditCard() {
   });
 
   useEffect(() => {
-    setIsLoading(true);
-    fetch("https://api.shipap.co.il/business/cards/?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0", {
-      credentials: "include",
+    setIsLoading(true)
+
+    fetch(`https://api.shipap.co.il/cards/${id}?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, {
+        credentials: 'include',
     })
-      .then(res => res.json())
-      .then(data => {
-        setFormData(data.filter(c => c.id == id)[0]);
-      })
-      .catch(err => { 
-        snackbar(err.message)
-        navigate('/error');
-      })
-      .finally(() => setIsLoading(false));
-  }, [])
+        .then(res => res.json())
+        .then(data => {
+            if ((user.id === data.clientId && roleType === RoleTypes.business) ||
+                (roleType === RoleTypes.admin && data.clientId === 0)) {
+                return setFormData(data);
+            } else {
+                navigate("/error")
+            }
+        })
+        .catch(() => {
+            navigate("/error");
+        })
+        .finally(() => setIsLoading(false));
+}, [navigate, id, user.id, roleType])
 
   const handleInputChange = ev => {
     const { id, value } = ev.target;
@@ -50,7 +57,7 @@ export default function EditCard() {
       [id]: value,
     };
 
-    const schema = cardSchema.validate(obj, { abortEarly: false, allowUnknown:true });
+    const schema = cardSchema.validate(obj, { abortEarly: false, allowUnknown: true });
     console.log(schema);
     const err = { ...errors, [id]: undefined };
 

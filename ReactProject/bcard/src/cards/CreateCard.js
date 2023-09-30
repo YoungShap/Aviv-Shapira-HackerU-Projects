@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import Joi from 'joi';
 import { BiRefresh } from 'react-icons/bi';
 import './Form.css'
+import './FormButtons.css'
 import { useNavigate } from 'react-router-dom';
 import { GeneralContext } from '../App';
 

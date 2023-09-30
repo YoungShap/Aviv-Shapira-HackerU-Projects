@@ -48,7 +48,7 @@ export const RoleTypes = {
     email: Joi.string().required().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }),
     password: Joi.string().required().regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d{4})(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{9,30}$/)
       .message('user "password" must be at least nine characters long and contain an uppercase letter, a lowercase letter, 4 numbers and one of the following characters !@#$%^&*'),
-    imgUrl: Joi.string().min(0).max(50),
+    imgUrl: Joi.string().min(0).max(500),
     imgAlt: Joi.string().min(0).max(20),
     state: Joi.string().min(0).max(20),
     country: Joi.string().min(1).required(),
@@ -65,7 +65,7 @@ export const RoleTypes = {
     lastName: Joi.string().min(3).max(10).required(),
     phone: Joi.string().regex(/^[0-9]{10,15}$/).messages({ 'string.pattern.base': `Phone number must have between 10-15 digits.` }).required(),
     email: Joi.string().required().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }),
-    password: Joi.string().required().regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d{4})(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{9,30}$/)
+    password: Joi.string().regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d{4})(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{9,30}$/)
         .message('user "password" must be at least nine characters long and contain an uppercase letter, a lowercase letter, 4 numbers and one of the following characters !@#$%^&*'),
     imgUrl: Joi.string().min(0).max(500),
     imgAlt: Joi.string().min(0).max(20),
@@ -97,6 +97,3 @@ export const cardSchema = Joi.object({
     clientId: Joi.any(),
     createdTime: Joi.any()
   });
-
-
-

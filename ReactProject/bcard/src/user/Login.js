@@ -133,7 +133,7 @@ export default function Login() {
                     <Typography component="h1" variant="h5" sx={{ color: isDark ? 'white' : 'black' }}>
                         Login
                     </Typography>
-                    <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, color: isDark ? 'white' : 'black' }}>
+                    <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, color: isDark ? 'white' : 'black', width:'100%' }}>
                         <TextField style={{ backgroundColor: isDark ? '#2b2b2b' : 'white' }}
                             onChange={handleInputChange}
                             margin="normal"
@@ -146,7 +146,7 @@ export default function Login() {
                             autoFocus
                         />
                         {errors.email ? <div className='fieldError'>{errors.email}</div> : ''}
-                        <TextField style={{ backgroundColor: isDark ? '#2b2b2b' : 'white' }} 
+                        <TextField style={{ backgroundColor: isDark ? '#2b2b2b' : 'white'}} 
                             onChange={handleInputChange}
                             margin="normal"
                             required

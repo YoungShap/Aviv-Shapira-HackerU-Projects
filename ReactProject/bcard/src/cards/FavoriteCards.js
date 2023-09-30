@@ -70,7 +70,7 @@ export default function FavoriteCards() {
                 <div className='myIcons'>
                   <div className='icons1'>
                     <span className='Heart' onClick={() => unfavorite(c.id)}> {user && <BsFillHeartFill style={{ color: "red" }} size={26} />}</span>
-                    <span className='Phone'><FaPhoneAlt size={26} /></span>
+                    <a href={`tel:${c.phone}`} className='Phone'><FaPhoneAlt size={26} /></a>
                       <Link to={`/cards/${c.id}`}><span className='Expand'><AiOutlineExpand size={26} /></span></Link>
                   </div>
                   <div className='sep'></div>
