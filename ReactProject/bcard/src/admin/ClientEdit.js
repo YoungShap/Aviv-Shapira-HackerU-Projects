@@ -36,9 +36,13 @@ export default function ClientEdit() {
         })
             .then(res => res.json())
             .then(data => {
-                setFormData(data.filter(c => c.id == id)[0]);
+                if(data.map(d => d.id).includes(+id)){
+                    setFormData(data.filter(c => c.id == id)[0]);
+                } else {
+                    navigate('/error');
+                }
             })
-            .catch(err => {
+            .catch(() => {
                 navigate('/error');
             })
             .finally(() => setIsLoading(false));
