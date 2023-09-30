@@ -37,7 +37,7 @@ Libraries Used -
 -
 React,
 React Icons,
-Joi,
+JOI,
 MUI,
 CSS,
 JSX,
