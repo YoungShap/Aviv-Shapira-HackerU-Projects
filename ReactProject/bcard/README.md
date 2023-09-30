@@ -32,3 +32,14 @@ Have all the capabilities of business and normal users, plus:
 Access a CRM (Customer Relationship Management) system for managing users and clients.
 Perform administrative tasks, such as adding, editing, or deleting user accounts.
 View and manage client data and business card activity.
+
+Libraries Used - 
+-
+React
+React Icons
+Joi
+MUI
+CSS
+JSX
+JS
+
