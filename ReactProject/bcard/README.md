@@ -35,11 +35,11 @@ View and manage client data and business card activity.
 
 Libraries Used - 
 -
-React
-React Icons
-Joi
-MUI
-CSS
-JSX
-JS
+React,
+React Icons,
+Joi,
+MUI,
+CSS,
+JSX,
+JS.
 
