@@ -73,7 +73,7 @@ function App() {
         {isLoading && <Loader />}
         {snackbarText && <Snackbar text={snackbarText} />}
       </GeneralContext.Provider>
-          <div className='addCard1'>{user && <button className='addCard'><Link to={'/business/cards/new'}>+</Link></button>}</div> 
+          <div className='addCard1'>{[RoleTypes.business, RoleTypes.admin].includes(roleType) && <button className='addCard'><Link to={'/business/cards/new'}>+</Link></button>}</div> 
     </>
   );
 }

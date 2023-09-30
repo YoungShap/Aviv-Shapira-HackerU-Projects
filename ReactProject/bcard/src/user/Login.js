@@ -108,7 +108,6 @@ export default function Login() {
             })
             .catch(err => {
                 snackbar(err.message);
-                navigate('/error');
             })
             .finally(() => {
                 setIsLoading(false);
