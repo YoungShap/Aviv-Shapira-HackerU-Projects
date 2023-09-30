@@ -158,10 +158,6 @@ export default function Login() {
                             autoComplete="current-password"
                         />
                         {errors.password ? <div className='fieldError'>{errors.password}</div> : ''}
-                        <FormControlLabel
-                            control={<Checkbox value="remember" style={{ color: isDark ? 'white' : 'black' }} />}
-                            label="Remember me"
-                        />
                         <Button style={{ backgroundColor: isDark ? '#121010' : 'blue' }}
                             // disabled={!isValid}
                             type="submit"
