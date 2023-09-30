@@ -40,7 +40,9 @@ React,
 React Icons,
 JOI,
 MUI,
-CSS,
-JSX,
-JS.
+Moment,
+React-Dom,
+React-Router-Dom,
+Styled-Components.
+
 
