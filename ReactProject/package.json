@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "joe": "^2.0.2",
+    "joi": "^17.9.2",
+    "moment": "^2.29.4",
+    "react-router-dom": "^6.15.0"
+  }
+}

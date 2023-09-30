@@ -1,0 +1,28 @@
+.title {
+    font-size: 50px;
+    padding: 8px;
+    color: rgb(153, 15, 15);
+    text-align: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:965px) {
+    .title {
+        font-size: 35px;
+    }
+}
+
+.p {
+    font-size: 25px;
+    padding: 8px;
+    color: rgb(66, 63, 63);
+}
+
+@media screen and (max-width:965px) {
+    .p {
+        font-size: 18px;
+    }
+}
