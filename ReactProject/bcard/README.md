@@ -12,7 +12,7 @@ Cardify+ is a web-based application developed using React that simplifies the pr
 
 Features
 -
--DarkMode,LightMode(Toggle) , Adding Favoriting Deleting and Editing of Cards || Clients(Admins only).
+-DarkMode, LightMode(Toggle) , Adding Favoriting Deleting and Editing of Cards || Clients(Admins only).
 
 -Edit your own account(*Admins can't edit themselves*).
 
