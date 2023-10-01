@@ -37,7 +37,7 @@ View and manage client data and business card activity.
 
 Features
 -
--DarkMode, LightMode(Toggle) , Adding Favoriting Deleting and Editing of Cards || Clients(Admins only).
+-DarkMode, LightMode(Toggle) , Adding Favoriting,  Deleting,  and Editing of Cards || Clients(Admins only).
 
 -Edit your own account(*Only for business and normal users*).
 
