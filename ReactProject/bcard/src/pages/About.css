@@ -27,15 +27,15 @@ h2 {
     font-size: 18px;
     color: #535859;
 }
-@media screen and (max-width:375px) {
+@media screen and (max-width:400px) {
     .mainAbt {
         font-size: 18px;
     }
     .aboutContainer h1 {
-        font-size: 30px;
+        font-size: 28px;
     }
     .aboutContainer h2 {
-        font-size: 30px;
+        font-size: 28px;
     }
 }
 

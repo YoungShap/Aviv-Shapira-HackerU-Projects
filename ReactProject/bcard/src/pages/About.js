@@ -11,7 +11,7 @@ export default function About() {
         <li><b>Adjust:</b> Edit and modify your card as you wish.</li>
         <li><b>Finally:</b> Enjoy free exposure on our Home page and continue to grow your business with the help our platform.</li>
       </ul>
-      <h2>Get Started Today</h2>
+      <h2>Get Started</h2>
       <p className='getStarted'>Download Cardify+ now and make a memorable impression with your business cards.<br></br> Your professional journey starts here! <br></br>
         Contact Us
         For assistance, email us at support@cardifyplus.com. <br></br>
