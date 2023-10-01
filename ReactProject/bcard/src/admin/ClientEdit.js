@@ -36,7 +36,7 @@ export default function ClientEdit() {
         })
             .then(res => res.json())
             .then(data => {
-                if(data.map(d => d.id).includes(+id)){
+                if (data.map(d => d.id).includes(+id)) {
                     setFormData(data.filter(c => c.id == id)[0]);
                 } else {
                     navigate('/error');
@@ -48,7 +48,7 @@ export default function ClientEdit() {
             .finally(() => setIsLoading(false));
     }, [])
 
-    const handleInputChange = (ev) => {
+    const handleInputChange = (ev) => {  // a function that handles any input change made by the user and upadates the DOM accordingly  //
         const { id, value, type, checked } = ev.target;
         let obj;
 
@@ -63,12 +63,11 @@ export default function ClientEdit() {
                 [id]: value,
             };
         }
-        const schema = editSchema.validate(obj, { abortEarly: false, allowUnknown: true });
+        const schema = editSchema.validate(obj, { abortEarly: false, allowUnknown: true }); // JOI validation (editSchema is in the Config.js file) //
         const err = { ...errors, [id]: undefined };
 
         if (schema.error) {
             const error = schema.error.details.find(e => e.context.key === id);
-
             if (error) {
                 err[id] = error.message;
             }
@@ -79,7 +78,7 @@ export default function ClientEdit() {
         setFormData(obj);
         setErrors(err);
     };
-    const save = (ev) => {
+    const save = (ev) => {   // a function that saves the changes that were made  //
         ev.preventDefault();
         setIsLoading(true);
         fetch(`https://api.shipap.co.il/admin/clients/${id}?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, {
@@ -198,6 +197,5 @@ export default function ClientEdit() {
                     <button className='submitG' disabled={!isValid} onClick={save}>SUBMIT</button>
                 </div>
             </form>
-        </div>
-    )
+        </div>)
 }

@@ -12,7 +12,7 @@ import ErrorPage from './components/ErrorPage';
 
 
 
-export default function RouterAuth() {
+export default function RouterAuth() {// this router is for when there is no user  //
     return (
         <Routes>
             <Route path="/" element={<Cards/>} />

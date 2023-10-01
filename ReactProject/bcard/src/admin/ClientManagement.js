@@ -14,7 +14,7 @@ export default function ClientManagement() {
   const { setIsLoading, snackbar, roleType, user, searchWord } = useContext(GeneralContext);
 
 
-  useEffect(() => {
+  useEffect(() => {  // a function that gets all clients from the API //
     fetch(`https://api.shipap.co.il/admin/clients?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, {
       credentials: 'include',
       method: 'GET',
@@ -28,7 +28,7 @@ export default function ClientManagement() {
       })
   }, [])
   const removeClient = (id) => {
-    if (!window.confirm('Are you sure you want to remove this client?')) {
+    if (!window.confirm('Are you sure you want to remove this client?')) {  // a function for removing a client //
       return;
     }
 

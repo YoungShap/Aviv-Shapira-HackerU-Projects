@@ -40,7 +40,7 @@ export default function Signup() {
   const [isValid, setIsValid] = useState(false);
 
 
-  const handleInputChange = ev => {
+  const handleInputChange = ev => {  // a function that handles any input change made by the user and upadates the DOM accordingly  //
     const { id, value } = ev.target;
     let obj = {
       ...formData,
@@ -54,7 +54,7 @@ export default function Signup() {
       }
     }
 
-    const schema = signupSchema.validate(obj, { abortEarly: false });
+    const schema = signupSchema.validate(obj, { abortEarly: false }); // JOI validation (signupSchema is in the Config.js file) //
     const err = { ...errors, [id]: undefined };
 
     if (schema.error) {
@@ -75,7 +75,7 @@ export default function Signup() {
   function signup(ev) {
     ev.preventDefault();
     setIsLoading(true);
-    fetch("https://api.shipap.co.il/clients/signup?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0", {
+    fetch("https://api.shipap.co.il/clients/signup?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0", { // a function that handles signup requests //
       credentials: 'include',
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

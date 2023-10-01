@@ -30,12 +30,12 @@ export default function Login() {
         password: '',
       });
       
-      const loginSchema = Joi.object({
+      const loginSchema = Joi.object({  // this form's specific JOI validation  //
           email: Joi.string().required().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }),
           password: Joi.string().required().regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d{4})(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{9,30}$/)
             .message('user "password" must be at least nine characters long and contain an uppercase letter, a lowercase letter, 4 numbers and one of the following characters !@#$%^&*'),
           });
-          const handleInputChange = ev => {
+          const handleInputChange = ev => { // a function that handles any input change made by the user and upadates the DOM accordingly  //
             const { id, value } = ev.target;
             let obj = {
               ...formData,
@@ -74,7 +74,7 @@ export default function Login() {
         
         
 
-        fetch(`https://api.shipap.co.il/clients/login?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, {
+        fetch(`https://api.shipap.co.il/clients/login?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, { // a function that handles login requests, checks and applies corrensponding user roleTypes  //
             credentials: 'include',
             method: 'POST',
             headers: { 'Content-type': 'application/json' },

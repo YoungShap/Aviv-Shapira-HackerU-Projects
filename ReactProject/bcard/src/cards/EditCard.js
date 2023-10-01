@@ -32,7 +32,7 @@ export default function EditCard() {
   useEffect(() => {
     setIsLoading(true)
 
-    fetch(`https://api.shipap.co.il/cards/${id}?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, {
+    fetch(`https://api.shipap.co.il/cards/${id}?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, { // a function that gets one card and fills its info into the edit form //
         credentials: 'include',
     })
         .then(res => res.json())
@@ -50,15 +50,14 @@ export default function EditCard() {
         .finally(() => setIsLoading(false));
 }, [navigate, id, user.id, roleType])
 
-  const handleInputChange = ev => {
+  const handleInputChange = ev => { // a function that handles any input change made by the user and upadates the DOM accordingly //
     const { id, value } = ev.target;
     let obj = {
       ...formData,
       [id]: value,
     };
 
-    const schema = cardSchema.validate(obj, { abortEarly: false, allowUnknown: true });
-    console.log(schema);
+    const schema = cardSchema.validate(obj, { abortEarly: false, allowUnknown: true }); // JOI validation(cardSchema is located in Config.js) //
     const err = { ...errors, [id]: undefined };
 
     if (schema.error) {
@@ -76,7 +75,7 @@ export default function EditCard() {
     setErrors(err);
   };
 
-  const save = (ev) => {
+  const save = (ev) => { // a function that saves any changes that were made to the card //
     ev.preventDefault();
     setIsLoading(true);
     fetch(`https://api.shipap.co.il/business/cards/${id}?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, {

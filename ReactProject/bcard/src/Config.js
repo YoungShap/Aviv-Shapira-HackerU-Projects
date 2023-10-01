@@ -1,5 +1,9 @@
-import Joi from 'joi';
 
+//CONFIG PAGE //
+
+
+import Joi from 'joi';
+// user roleTypes(Levels different users) //
 export const RoleTypes = {
     none: 0,
     user: 1,
@@ -10,7 +14,7 @@ export const RoleTypes = {
   export  const checkPermissions = (permissions, userRoleType) => {
     return permissions.includes(userRoleType);
   }
-  
+  // all pages availible and who can access them by filtering roleTypes //
   export const pages = [
     { route: '/', title: 'Home' },
     { route: '/About', title: 'About' },
@@ -23,7 +27,7 @@ export const RoleTypes = {
   export const settings = [
     { route: '/account', title: 'My Account', permissions: [RoleTypes.user, RoleTypes.business] },
   ];
-
+// signup form structure that i used to create my signup form in the shortest way i can //
   export const structure = [
     { name: 'middleName', type: 'text', label: 'Middle Name', required: true, block: true },
     { name: 'lastName', type: 'text', label: 'Last Name', required: true, block: true },
@@ -39,7 +43,7 @@ export const RoleTypes = {
     { name: 'houseNumber', type: 'number', label: 'houseNumber', required: true, block: true },
     { name: 'zip', type: 'number', label: 'zip', required: false, block: true },
   ]
-
+  // signup JOI schema //
   export const signupSchema = Joi.object({
     firstName: Joi.string().min(3).max(10).required(),
     middleName: Joi.string().min(0).max(10).empty(),
@@ -58,7 +62,7 @@ export const RoleTypes = {
     zip: Joi.string().min(0),
     business: Joi.boolean().default(false),
   });
-
+ // edit JOI schema //
   export  const editSchema = Joi.object({
     firstName: Joi.string().min(3).max(10).required(),
     middleName: Joi.string().min(0).max(10).empty(),
@@ -77,7 +81,7 @@ export const RoleTypes = {
     zip: Joi.number().min(0),
     business: Joi.boolean().default(false),
 });
-
+ // card JOI schema //
 export const cardSchema = Joi.object({
     title: Joi.string().min(3).max(50).required(),
     subtitle: Joi.string().min(0).max(25),

@@ -16,7 +16,7 @@ export default function FavoriteCards() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`https://api.shipap.co.il/cards/favorite?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, {
+    fetch(`https://api.shipap.co.il/cards/favorite?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, { // a function that gets all favorite cards from the API(per specific user of course)  //
       credentials: 'include',
     })
       .then(res => res.json())
@@ -31,7 +31,7 @@ export default function FavoriteCards() {
       })
   }, []);
  
-  const unfavorite = (id) => {
+  const unfavorite = (id) => { // a function that unfavorites the clicked card  //
     setIsLoading(true);
     fetch(`https://api.shipap.co.il/cards/${id}/unfavorite?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, {
       credentials: 'include',

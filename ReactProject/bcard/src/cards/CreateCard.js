@@ -28,7 +28,7 @@ export default function CreateCard() {
     zip: '',
   });
 
-  const cardSchema = Joi.object({
+  const cardSchema = Joi.object({ // this forms specific JOI validation //
     title: Joi.string().min(3).max(50).required(),
     subtitle: Joi.string().min(0).max(50).empty(),
     description: Joi.string().min(3).max(500).required(),
@@ -46,7 +46,7 @@ export default function CreateCard() {
 
   });
 
-  const handleInputChange = ev => {
+  const handleInputChange = ev => { // a function that handles any input change made by the user and upadates the DOM accordingly  //
     const { id, value } = ev.target;
     let obj = {
       ...formData,
@@ -71,7 +71,7 @@ export default function CreateCard() {
     setErrors(err);
   };
 
-  function createCard(ev) {
+  function createCard(ev) { // a function that adds the card to the API database after the user filled in all required fields  //
     ev.preventDefault();
 
     setIsLoading(true);

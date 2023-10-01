@@ -13,7 +13,7 @@ import ErrorPage from './components/ErrorPage';
 
 
 
-export default function Router() {
+export default function Router() {  // this router is for when a user is connected  //
     return (
         <Routes>
             <Route path="/" element={<Cards/>} />

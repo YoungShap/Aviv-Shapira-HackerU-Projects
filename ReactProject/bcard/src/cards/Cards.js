@@ -17,7 +17,7 @@ export default function Cards() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`https://api.shipap.co.il/cards?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, {
+    fetch(`https://api.shipap.co.il/cards?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, { // a function that gets all cards from the API //
       credentials: 'include',
     })
       .then(res => res.json())
@@ -34,7 +34,7 @@ export default function Cards() {
   }, [])
 
   const adminRemove = (id) => {
-    if (!window.confirm('Are you sure you want to remove this card?')) {
+    if (!window.confirm('Are you sure you want to remove this card?')) { // a function that allows admin users(only) to delete any card //
       return;
     }
 
@@ -50,7 +50,7 @@ export default function Cards() {
         snackbar('Failed to delete Card');
       });
   }
-  const favorite = (card) => {
+  const favorite = (card) => { // a function to add a card to the favorites tab //
     fetch(`https://api.shipap.co.il/cards/${card.id}/favorite?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, {
       credentials: 'include',
       method: 'PUT',
@@ -64,7 +64,7 @@ export default function Cards() {
       })
   }
 
-  const unfavorite = (card) => {
+  const unfavorite = (card) => {// a function to remove a card from the favorites tab //
     setIsLoading(true);
     fetch(`https://api.shipap.co.il/cards/${card.id}/unfavorite?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, {
       credentials: 'include',

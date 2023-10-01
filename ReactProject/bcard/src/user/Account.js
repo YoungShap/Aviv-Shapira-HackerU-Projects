@@ -29,7 +29,7 @@ export default function Account() {
     business: false,
   });
   
-  useEffect(() => {
+  useEffect(() => { // checking if there is a user logged in, in oreder to apply his/her details in to the edit form //
     setIsLoading(true);
     if (user) {
       setFormData(user);
@@ -39,7 +39,7 @@ export default function Account() {
     setIsLoading(false);
   }, [user])
 
-  const handleInputChange = (ev) => {
+  const handleInputChange = (ev) => { // a function that handles any input change made by the user and upadates the DOM accordingly  //
     const { id, value, type, checked } = ev.target;
     let obj;
 
@@ -54,7 +54,7 @@ export default function Account() {
         [id]: value,
       };
     }
-    const schema = editSchema.validate(obj, { abortEarly: false, allowUnknown: true, });
+    const schema = editSchema.validate(obj, { abortEarly: false, allowUnknown: true, }); // JOI validation (editSchema is in the Config.js file) //
     const err = { ...errors, [id]: undefined };
 
     if (schema.error) {
@@ -72,7 +72,7 @@ export default function Account() {
     setErrors(err);
   };
 
-  const save = (ev) => {
+  const save = (ev) => { // a function that saves the changes that were made  //
     ev.preventDefault();
     setIsLoading(true);
     fetch(`https://api.shipap.co.il/clients/update?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, {

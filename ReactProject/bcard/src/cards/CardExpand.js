@@ -21,7 +21,7 @@ export default function CardExpand() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`https://api.shipap.co.il/cards/${id}?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, {
+    fetch(`https://api.shipap.co.il/cards/${id}?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, { // a function that gets one card based on its ID from the API //
       credentials: 'include',
     })
       .then(res => res.json())
