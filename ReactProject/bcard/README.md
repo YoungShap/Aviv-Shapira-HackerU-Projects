@@ -34,6 +34,18 @@ Access a CRM (Customer Relationship Management) system for managing users and cl
 Perform administrative tasks, such as adding, editing, or deleting user accounts.
 View and manage client data and business card activity.
 
+
+Features
+-
+-DarkMode, LightMode(Toggle) , Adding Favoriting Deleting and Editing of Cards || Clients(Admins only).
+
+-Edit your own account(*Only for business and normal users*).
+
+-Expanded view of every Card with even more details about the business.
+
+-Searchbar for finding Cards || Clients more easily.
+
+
 Libraries Used - 
 -
 React,
