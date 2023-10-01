@@ -39,7 +39,7 @@ Features
 -
 -DarkMode, LightMode(Toggle) , Adding Favoriting Deleting and Editing of Cards || Clients(Admins only).
 
--Edit your own account(*Admins can't edit themselves*).
+-Edit your own account(*Only for business and normal users*).
 
 -Expanded view of every Card with even more details about the business.
 
