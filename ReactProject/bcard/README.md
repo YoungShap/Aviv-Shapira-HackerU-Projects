@@ -31,13 +31,13 @@ Edit and delete their own business cards.
 Admin User:
 Have all the capabilities of business and normal users, plus:
 Access a CRM (Customer Relationship Management) system for managing users and clients.
-Perform administrative tasks, such as adding, editing, or deleting user accounts.
+Perform administrative tasks, such as editing, or deleting user accounts.
 View and manage client data and business card activity.
 
 
 Features
 -
--DarkMode, LightMode(Toggle) , Adding Favoriting Deleting and Editing of Cards || Clients(Admins only).
+-DarkMode, LightMode(Toggle) , Adding,   Favoriting,   Deleting,   and Editing of Cards || Clients(Admins only).
 
 -Edit your own account(*Only for business and normal users*).
 
