@@ -10,6 +10,12 @@ About The Project
 -
 Cardify+ is a web-based application developed using React that simplifies the process of designing and managing business cards for various users. The project focuses on enhancing user engagement and interaction through different user levels: normal users, business users, and admin users.
 
+Features
+-
+DarkMode,LightMode(Toggle) , Adding Favoriting Deleting and Editing of Cards || Clients(Admins only).
+Edit your own account(*Admins can't edit themselves*).
+Expanded view of every Card with even more details about the business.
+Searchbar for finding Cards || Clients more easily.
 
 Usage -
 -
