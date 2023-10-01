@@ -176,7 +176,7 @@ export default function Account() {
         </div>
         <div className='options2'>
           <div className='actions'>
-            <button className='cancel'>CANCEL</button>
+          <button className='cancel' onClick={() => navigate('/')}>CANCEL</button>
             <button className='refresh'><BiRefresh size={22} /></button>
           </div>
           <button className='submitG' disabled={!isValid} onClick={save}>SUBMIT</button>
